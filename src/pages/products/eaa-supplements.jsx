@@ -43,10 +43,10 @@ function PureGoEaa() {
 
   const productImages = {
     "250g-Watermelon": [
-      "/assets/images/products/eaa/eaa-1.webp",
-      "/assets/images/products/eaa/eaa-2.webp",
-      "/assets/images/products/eaa/eaa-3.webp",
-      "/assets/images/products/eaa/eaa-4.webp",
+      "/assets/images/pre-workout/pre-workout-1.jpg",
+      "/assets/images/pre-workout/pre-workout-2.jpg",
+      "/assets/images/pre-workout/pre-workout-3.jpg",
+      "/assets/images/pre-workout/pre-workout-4.jpg",
     ],
   };
 
@@ -55,7 +55,7 @@ function PureGoEaa() {
       key: "250g-Watermelon",
       data: {
         id: "67e7742d63f930dcc6a27159",
-        img: "/assets/images/products/eaa/eaa-1.webp",
+        img: "/assets/images/pre-workout/pre-workout-1.jpg",
         name: "EAA Powder",
         price: "2099",
         discount: "490",

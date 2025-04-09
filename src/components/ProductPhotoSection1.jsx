@@ -55,7 +55,7 @@ function ProductPhotoSection1({
                         </div>
                     </div>
                     <div className="col-12">
-                        <div className="thumbnail-images">
+                        <div className="thumbnail-images d-flex">
                             {images.map((image, index) => (
                                 <div
                                     key={index}

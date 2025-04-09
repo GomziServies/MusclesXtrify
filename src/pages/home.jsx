@@ -220,7 +220,7 @@ function Home() {
                 >
                   <img
                     src={
-                      process.env.PUBLIC_URL + "/assets/images/banner_img.png"
+                      process.env.PUBLIC_URL + "/assets/images/banner_img.webp"
                     }
                     alt="img"
                   />
@@ -423,7 +423,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-chocolate-1kg.html">
+                      <a href="creatine-supplements">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -435,7 +435,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-chocolate-1kg.html">
+                        <a href="creatine-supplements">
                           Whey Protein Chocolate-1kg
                         </a>
                       </h4>
@@ -446,7 +446,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-mocha-coffee-1kg.html">
+                      <a href="creatine-supplements">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -458,7 +458,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-mocha-coffee-1kg.html">
+                        <a href="creatine-supplements">
                           Whey Protein Mocha Coffee-1kg
                         </a>
                       </h4>
@@ -469,7 +469,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-chocolate-2kg.html">
+                      <a href="creatine-supplements">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -481,7 +481,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-chocolate-2kg.html">
+                        <a href="creatine-supplements">
                           Whey Protein Chocolate-2kg
                         </a>
                       </h4>
@@ -492,7 +492,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-mocha-coffee-2kg.html">
+                      <a href="creatine-supplements">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -504,7 +504,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-mocha-coffee-2kg.html">
+                        <a href="creatine-supplements">
                           Whey Protein Mocha Coffee-2kg
                         </a>
                       </h4>

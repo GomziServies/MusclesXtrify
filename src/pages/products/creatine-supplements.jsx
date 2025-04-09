@@ -44,10 +44,10 @@ function PureGoCreatine() {
 
   const productImages = {
     "250g-Lemon": [
-      "/assets/images/products/creatine/creatine-1.webp",
-      "/assets/images/products/creatine/creatine-2.webp",
-      "/assets/images/products/creatine/creatine-3.webp",
-      "/assets/images/products/creatine/creatine-4.webp",
+      "/assets/images/creatine/creatine-1.jpg",
+      "/assets/images/creatine/creatine-2.jpg",
+      "/assets/images/creatine/creatine-3.jpg",
+      "/assets/images/creatine/creatine-4.jpg",
     ],
   };
 
@@ -56,11 +56,11 @@ function PureGoCreatine() {
       key: "250g-Lemon",
       data: {
         id: "67e773f463f930dcc6a27155",
-        img: "/assets/images/products/creatine/creatine-1.webp",
+        img: "/assets/images/creatine/creatine-1.jpg",
         name: "Creatine Monohydrate",
-        price: "1499",
-        discount: "350",
-        size: "250 g",
+        price: "1800",
+        // discount: "350",
+        size: "250g",
         dis_point: "15%",
       },
     },
@@ -186,7 +186,7 @@ function PureGoCreatine() {
                   <div className="inner-shop-details-meta">
                     <ul className="list-wrap">
                       <li>
-                        Brands : <a href="shop.html">Pure-Go</a>
+                        Brands : <a href="shop.html">MusclesXtrify</a>
                       </li>
                       <li className="inner-shop-details-review">
                         <div className="rating">
@@ -202,12 +202,12 @@ function PureGoCreatine() {
                   </div>
                   <div className="inner-shop-details-price">
                     <h2 className="price d-flex">
-                      ₹{currentProductData.discount}/-
+                      {/* ₹{currentProductData.discount}/- */}
                       <span className="old-prices">
                         ₹{currentProductData.price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">76%</h5>
+                    <h5 className="stock-status">- In Stock</h5>
                   </div>
                   <p>
                     MusclesXtrify Creatine Monohydrate is a powerful supplement
