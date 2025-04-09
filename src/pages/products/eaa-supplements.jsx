@@ -140,6 +140,29 @@ function PureGoEaa() {
         <i className="fas fa-angle-up"></i>
       </button>
       <main className="main-area fix">
+        <section className="breadcrumb-area breadcrumb-bg">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-10">
+                <div className="breadcrumb-content text-center">
+                  <h2 className="title">Product</h2>
+                  <nav aria-label="Breadcrumbs" className="breadcrumb-trail">
+                    <ul className="breadcrumb">
+                      <li className="breadcrumb-item trail-item trail-begin">
+                        <a href="index.html">
+                          <span>Home</span>
+                        </a>
+                      </li>
+                      <li className="breadcrumb-item trail-item trail-end">
+                        <span>Product Details</span>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="inner-shop-details-area">
           <div className="container">
             <div className="row">
@@ -189,10 +212,15 @@ function PureGoEaa() {
                     <h5 className="stock-status">76%</h5>
                   </div>
                   <p>
-                    EAA is an advanced science-based solution that contains 13
-                    Ultra amino acids as well as hydration and a vitamin booster
-                    combination. EAAs aid in muscle growth and regeneration
-                    while also lowering fatigue and soreness.
+                    MusclesXtrify Pre Workout is designed to fuel your body with
+                    energy, endurance, and focus for intense training sessions.
+                    Packed with premium ingredients, it boosts stamina and helps
+                    you push through your toughest workouts. This powerful
+                    pre-workout formula supports strength, mental clarity, and
+                    muscle performance, ensuring you stay energized and
+                    motivated. Perfect for athletes and fitness enthusiasts, it
+                    prepares your body to perform at its best and achieve your
+                    fitness goals.
                   </p>
                   <div>
                     <SelectableList
@@ -248,86 +276,79 @@ function PureGoEaa() {
                       aria-labelledby="description-tab"
                     >
                       <div className="product-desc-content">
-                        <h4 className="title">Pure Go EAA</h4>
-                        <p>
-                          EAA is an advanced science-based solution that
-                          contains 13 Ultra amino acids as well as hydration and
-                          a vitamin booster combination. EAAs aid in muscle
-                          growth and regeneration while also lowering fatigue
-                          and soreness. This formula contains taurine, which
-                          aids in muscle re-energizing and mending, as well as
-                          citrulline, which aids in the oxygenation and
-                          elimination of toxins from muscles.
-                        </p>
-                        <p>
-                          This drink has a smooth and creamy texture thanks to
-                          Ultra Granulation Technology. 13 Ultra Amino acids
-                          help in muscle recovery Muscle Hydrating Electrolytes
-                          help Hydrate Muscle Fibres for Proper Muscle & Nerve
-                          Function Added Vitamin booster blend that aids Muscle
-                          Growth and Health, Enhances Metabolism EAA is
-                          vegetarian, caffeine and banned substance free with no
-                          added sugar.
-                        </p>
                         <h4 className="title">
-                          What Are The Benefits Of Consuming Intra-Training
-                          Drinks?
+                          The true strength of MusclesXtrify
                         </h4>
                         <p>
-                          Intra-training supplements are those energy drinks
-                          that are consumed during training/workouts. They
-                          contain ingredients that are readily absorbed by the
-                          body to offer immediate effect with the aim to provide
-                          delay intra-workout fatigue, hydration, optimize
-                          muscle recovery and enhance performance.
+                          It will suppress your appetite and provide you with a
+                          higher energy level in order to keep the adrenaline
+                          levels up. It will also boost your metabolism and burn
+                          calories for you. For permanent weight loss, it is
+                          recommended to use a fat burner which helps to reduce
+                          fat faster.Ignite The Fat Burner Pre-Workout is a
+                          sophisticated and comprehensive pre-workout fat burner
+                          supplement.
                         </p>
-                        <h4 className="title">How EAA Benefits?</h4>
                         <p>
-                          Amino acids are organic substances that include
-                          nitrogen, carbon, hydrogen, and oxygen, as well as a
-                          variable side chain group. To develop and operate
-                          properly, our bodies require 20 distinct amino acids,
-                          out of which 9 are essential. Our bodies cannot
-                          produce these 9 amino acids; thus, they must be
-                          supplied through diet or supplementation, hence are
-                          considered essential amino acids. The best EAA
-                          supplement in India helps in increasing energy and
-                          endurance, provides better muscle recovery, boosts
-                          exercise and athletic performance, and better
-                          hydration to the muscles.
+                          Delivering intense energy, supercharged strength, and
+                          power, heightened focus, vein-popping pump and
+                          endurance, and superior workouts with enhanced
+                          thermogenic and fat-burning properties are just a few
+                          of the benefits of its uniquely developed formula. For
+                          athletes of all levels, Ignite The Fat Burner
+                          Pre-Workout is a highly stimulating and effective
+                          pre-workout fat-burning supplement that can assist
+                          maximize workout performance, burning fat more
+                          quickly, and pushing your body beyond previous
+                          boundaries.
                         </p>
-                        <h4 className="title">How Does EAA Help?</h4>
-                        <p>
-                          EAA is an advanced science-based formula designed with
-                          a complete spectrum of 9 essential amino acids with
-                          added hydration and a vitamin booster blend. EAAs help
-                          in muscle development and repair, as well as reducing
-                          muscle fatigue and soreness. This formula contains
-                          taurine, which aids in re-energizing and muscle
-                          healing, as well as citrulline, which helps oxygenate
-                          and eliminate toxins from muscles. The electrolytes
-                          combination will aid in the hydration of muscle fibers
-                          as well as healthy nerve and muscle function. The
-                          Vitamin Booster combination promotes muscular growth
-                          and metabolism. Designed with Ultra Granulation
-                          Technology this drink has a smooth and creamy texture,
-                          is banned substance free, and is available in
-                          delicious flavor.
-                        </p>
-                        <h4 className="title">Who Can Opt For EAA?</h4>
-                        <p>
-                          EAA can be consumed during intra-training/ workout by
-                          anyone who participates in sports, is body-building,
-                          fitness enthusiast looking to improve performance and
-                          recovery.
-                        </p>
-                        <h4 className="title">How To Use:</h4>
-                        <p>
-                          Add 1 scoop ( 10 gm ) of EAA in 400 - 420 ml of water
-                          or your favorite drink. Mix well. Drink!
-                        </p>
-                        <h4 className="title">When To Use:</h4>
-                        <p>During workouts or training</p>
+                        <h4 className="title">BENEFITS</h4>
+                        <ul class="product-desc-list list-wrap">
+                          <li>
+                            Experience real results & better performance with
+                            fat burning ingredients.
+                          </li>
+                          <li>
+                            Clinically proven & versatile supplement solution.
+                          </li>
+                          <li>Controls Appetite & Hunger.</li>
+                        </ul>
+                        <h4 class="title mt-5">Caution :</h4>
+                        <ul class="product-desc-list list-wrap">
+                          <li>
+                            Not for use by persons under the age of 18 years.
+                          </li>
+                          <li>
+                            Consult your doctor in case you are taking any
+                            medication.
+                          </li>
+                          <li>
+                            This product is not intended to diagnose, treat,
+                            cure or prevent any disease.
+                          </li>
+                          <li>Do not exceed recommended serving size.</li>
+                          <li>Store in a cool and dry place.</li>
+                          <li>Keep out of reach of children.</li>
+                          <li>
+                            This product is not to be used as a substitute for a
+                            varied diet. Not recommended for children, pregnant
+                            or lactating women. and people sensitive to
+                            caffeine.
+                          </li>
+                        </ul>
+                        <h4 class="title mt-5">Direction For Use :</h4>
+                        <ul class="product-desc-list list-wrap">
+                          <li>
+                            Take 5g (scoop for beginners) once a day with 200 -
+                            220 ml chilled water for an adult or as per
+                            Healthcare Expert.
+                          </li>
+                          <li>
+                            Take 10g (scoop for professionals) once a day with
+                            380 - 400 ml for an adult or as per Healthcare
+                            Expert.
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
@@ -364,121 +385,36 @@ function PureGoEaa() {
                         <table className="table table-sm">
                           <tbody>
                             <tr>
-                              <th scope="row">CALORIES</th>
-                              <td>6.12 Kcal</td>
+                              <th scope="row">L-CITRULLINE</th>
+                              <td>2.26 gm</td>
                             </tr>
                             <tr>
-                              <th scope="row">TOTAL CARBOHYDRATE</th>
+                              <th scope="row">L-ARGININE</th>
+                              <td>0.45 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">L-TAURINE</th>
+                              <td>0.36 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">B-ALANINE</th>
+                              <td>0.36 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">CAFFEINE ANHYDROUS</th>
                               <td>0.20 gm</td>
                             </tr>
                             <tr>
-                              <th scope="row">TOTAL SUGAR</th>
-                              <td>0</td>
+                              <th scope="row">GREEN TEA EXTRACT</th>
+                              <td>0.10 gm</td>
                             </tr>
                             <tr>
-                              <th scope="row">ADDED SUGAR</th>
-                              <td>0</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">PROTEIN</th>
-                              <td>0</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">TOTAL FAT</th>
-                              <td>0</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">
-                                ESSENTIAL AMINO ACIDS (EAA BLEND)
-                              </th>
-                              <td>7.8 gm</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-LEUCINE</th>
-                              <td>1.73 gm</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-ISOLEUCINE</th>
-                              <td>0.86 gm</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-VALINE</th>
-                              <td>0.86 gm</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-LYSINE</th>
-                              <td>288.88 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-THREONINE</th>
-                              <td>288.88 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-PHENYLALANINE</th>
-                              <td>150.22 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-HISTIDINE</th>
-                              <td>115.55 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">L-TRYPTOPHAN</th>
-                              <td>86.66 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">DL-METHIONINE</th>
-                              <td>52 mg</td>
+                              <th scope="row">GREEN COFFEE EXTRACT</th>
+                              <td>0.10 gm</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <HowToUse
-          src1="step-1.mp4"
-          src2="eaa-step-2.mp4"
-          src3="step-3.mp4"
-          src4="eaa-step-4.mp4"
-          step1="Add 300 ml of water"
-          step2="Mix 1 scoop of EAA"
-        />
-        <Review />
-        <section className="inner-shop-details-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="product-desc-wrap">
-                  <ul className="nav nav-tabs" id="myTabTwo" role="tablist">
-                    <li className="nav-item">
-                      <a
-                        href="#"
-                        className="nav-link active"
-                        id="review-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#review"
-                        role="tab"
-                        aria-controls="review"
-                        aria-selected="false"
-                      >
-                        Reviews
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="tab-content" id="myTabContentTwo">
-                    <div
-                      className="tab-pane fade show active"
-                      id="review"
-                      role="tabpanel"
-                      aria-labelledby="review-tab"
-                    >
-                      <NutritionReviewSection
-                        product_id={products[0].data.id}
-                      />
                     </div>
                   </div>
                 </div>
