@@ -10,6 +10,7 @@ import "../../assets/css/default.css";
 import "../../assets/css/jquery-ui.css";
 import "../../assets/css/magnific-popup.css";
 import "../../assets/css/odometer.css";
+import "../../assets/css/responsive.css";
 import "../../assets/css/slick.css";
 import "../../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -66,7 +67,6 @@ function PureGoCreatine() {
   ];
 
   const sizeOptions = [{ id: "250g", label: "250g" }];
-
   const flavorOptions = [{ id: "Lemon", label: "Lemon" }];
 
   const handleSelectSize = (id) => {
@@ -114,14 +114,12 @@ function PureGoCreatine() {
   return (
     <>
       <Helmet>
-        <title>Best Creatine Supplements for Muscle Growth & Strength</title>
+        <title>
+          MusclesXtrify Creatine Monohydrate - Boost Power & Performance
+        </title>
         <meta
           name="description"
-          content="Discover the best creatine supplements to boost muscle growth, enhance strength, and improve performance. Shop top picks today!"
-        />
-        <meta
-          name="keyword"
-          content="creatine, creatine monohydrate, micronised, muscle building, best creatine, best creatine for men, best creatine monohydrate, creatine powder, creatine monohydrate powder, best protein powder for muscle gain, best muscle building supplements, muscle building supplements, creatine for women, creatine supplements, micronized creatine, bodybuilding supplements, best creatine for muscle growth, best creatine supplement, muscle growth supplements, micronized creatine monohydrate, best protein powder for muscle growth"
+          content="Increase power, strength, and performance with MusclesXtrify Creatine Monohydrate for enhanced workouts and muscle growth."
         />
         <meta
           property="og:url"
@@ -140,6 +138,29 @@ function PureGoCreatine() {
         <i className="fas fa-angle-up"></i>
       </button>
       <main className="main-area fix">
+        <section className="breadcrumb-area breadcrumb-bg">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-xl-10">
+                <div className="breadcrumb-content text-center">
+                  <h2 className="title">Product</h2>
+                  <nav aria-label="Breadcrumbs" className="breadcrumb-trail">
+                    <ul className="breadcrumb">
+                      <li className="breadcrumb-item trail-item trail-begin">
+                        <a href="index.html">
+                          <span>Home</span>
+                        </a>
+                      </li>
+                      <li className="breadcrumb-item trail-item trail-end">
+                        <span>Product Details</span>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="inner-shop-details-area">
           <div className="container">
             <div className="row">
@@ -189,11 +210,15 @@ function PureGoCreatine() {
                     <h5 className="stock-status">76%</h5>
                   </div>
                   <p>
-                    Creatine monohydrate works by increasing the body's stores
-                    of phosphocreatine, a molecule that helps regenerate
-                    adenosine triphosphate, the primary energy source for muscle
-                    contractions during high-intensity activities like
-                    weightlifting and sprinting.
+                    MusclesXtrify Creatine Monohydrate is a powerful supplement
+                    designed to enhance strength, power, and muscle performance.
+                    This pure, high-quality creatine boosts energy during
+                    high-intensity workouts, allowing you to push harder and
+                    achieve better results. Ideal for athletes and bodybuilders,
+                    it supports muscle growth and endurance. Easy to mix and
+                    absorb, it helps maximize workout performance, leading to
+                    faster muscle recovery and improved overall fitness. Fuel
+                    your gains with MusclesXtrify Creatine!
                   </p>
                   <div>
                     <SelectableList
@@ -249,13 +274,16 @@ function PureGoCreatine() {
                       aria-labelledby="description-tab"
                     >
                       <div className="product-desc-content">
-                        <h4 className="title">Pure Go Creatine Monohydrate</h4>
+                        <h4 className="title">
+                          MusclesXtrify ATP Creatine Monohydrate :
+                        </h4>
                         <p>
                           Creatine monohydrate works by increasing the body's
                           stores of phosphocreatine, a molecule that helps
-                          regenerate adenosine triphosphate, the primary energy
-                          source for muscle contractions during high-intensity
-                          activities like weightlifting and sprinting.
+                          regenerate adenosine triphosphate (ATP), the primary
+                          energy source for muscle contractions during
+                          high-intensity activities like weightlifting and
+                          sprinting.
                         </p>
                         <h4 className="title">
                           When To Consume Creatine Monohydrate?
@@ -350,64 +378,9 @@ function PureGoCreatine() {
                               </th>
                               <td>4.5 gm</td>
                             </tr>
-                            <tr>
-                              <th scope="row">Citric Acid</th>
-                              <td>INS 330</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Sucralose</th>
-                              <td>INS 955</td>
-                            </tr>
                           </tbody>
                         </table>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <HowToUse
-          src1="step-1.mp4"
-          src2="atp-step-2.mp4"
-          src3="step-3.mp4"
-          src4="atp-step-4.mp4"
-          step1="Add 300 ml of water"
-          step2="Mix 1 scoop of Creatine Monohydrate"
-        />
-        <Review />
-        <section className="inner-shop-details-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="product-desc-wrap">
-                  <ul className="nav nav-tabs" id="myTabTwo" role="tablist">
-                    <li className="nav-item">
-                      <a
-                        href="#"
-                        className="nav-link active"
-                        id="review-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#review"
-                        role="tab"
-                        aria-controls="review"
-                        aria-selected="false"
-                      >
-                        Reviews
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="tab-content" id="myTabContentTwo">
-                    <div
-                      className="tab-pane fade show active"
-                      id="review"
-                      role="tabpanel"
-                      aria-labelledby="review-tab"
-                    >
-                      <NutritionReviewSection
-                        product_id={products[0].data.id}
-                      />
                     </div>
                   </div>
                 </div>
