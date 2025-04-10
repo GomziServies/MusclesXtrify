@@ -93,7 +93,7 @@ function PureGoPreWorkout() {
       if (!isLogin) {
         return openModal();
       }
-      let response
+      let response;
       //  = await axiosInstance.post("/order-cart/add-item", {
       //   item_id: product_id,
       //   quantity: 1,
@@ -144,7 +144,7 @@ function PureGoPreWorkout() {
                   <nav aria-label="Breadcrumbs" className="breadcrumb-trail">
                     <ul className="breadcrumb">
                       <li className="breadcrumb-item trail-item trail-begin">
-                        <a href="index.html">
+                        <a href="/">
                           <span>Home</span>
                         </a>
                       </li>

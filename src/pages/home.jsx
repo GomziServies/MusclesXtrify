@@ -16,6 +16,7 @@ import "../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../components/partials/Footer/footer";
+import { Accordion } from "react-bootstrap";
 
 function Home() {
   const canonicalUrl = window.location.href;
@@ -251,7 +252,13 @@ function Home() {
                 >
                   <div className="tg-features-item">
                     <div className="tg-features-icon">
-                      <i className="flaticon-supplement"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/capsule.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <div className="tg-features-content">
                       <h4 className="title">Calorie Increase</h4>
@@ -268,7 +275,14 @@ function Home() {
                 >
                   <div className="tg-features-item">
                     <div className="tg-features-icon">
-                      <i className="flaticon-whey-protein-3"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL +
+                          "/assets/images/whey-protein.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <div className="tg-features-content">
                       <h4 className="title">Typical Routine</h4>
@@ -285,7 +299,13 @@ function Home() {
                 >
                   <div className="tg-features-item">
                     <div className="tg-features-icon">
-                      <i className="flaticon-strong-1"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/muscle.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <div className="tg-features-content">
                       <h4 className="title">Energy Grow Up</h4>
@@ -347,7 +367,7 @@ function Home() {
                       performance, and support recovery for maximum fitness
                       results.
                     </p>
-                    <a href="about-us.html" className="tg-btn view-btn">
+                    <a href="/about-us" className="tg-btn view-btn">
                       VIEW more
                     </a>
                   </div>
@@ -390,7 +410,7 @@ function Home() {
                     products. Experience maximum results and take your fitness
                     journey to the next level with MusclesXtrify today!.
                   </p>
-                  <a href="about-us.html" className="tg-btn">
+                  <a href="/about-us" className="tg-btn">
                     VIEW more
                   </a>
                 </div>
@@ -564,10 +584,16 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">01</div>
                     <div className="icon">
-                      <i className="flaticon-vitamins-1"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/vitamin.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">Pure Power</a>
+                      <a href="/contact-us">Pure Power</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -581,10 +607,16 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">02</div>
                     <div className="icon">
-                      <i className="flaticon-supplement"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/capsule.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">Boost Strength</a>
+                      <a href="/contact-us">Boost Strength</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -598,10 +630,16 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">03</div>
                     <div className="icon">
-                      <i className="flaticon-vitamins"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/healthy.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">Rapid Recovery</a>
+                      <a href="/contact-us">Rapid Recovery</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -615,10 +653,17 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">04</div>
                     <div className="icon">
-                      <i className="flaticon-protein-2"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL +
+                          "/assets/images/whey-protein.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">All Natural</a>
+                      <a href="/contact-us">All Natural</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -632,10 +677,16 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">05</div>
                     <div className="icon">
-                      <i className="flaticon-tape-measure"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL + "/assets/images/waist.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">Fast Absorption</a>
+                      <a href="/contact-us">Fast Absorption</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -649,10 +700,17 @@ function Home() {
                   <div className="tg-service-item">
                     <div className="tg-services-count">06</div>
                     <div className="icon">
-                      <i className="flaticon-abs-1"></i>
+                      <img
+                        src={
+                          process.env.PUBLIC_URL +
+                          "/assets/images/upper-body.png"
+                        }
+                        alt="img"
+                        width="70%"
+                      />
                     </div>
                     <h2 className="title">
-                      <a href="contact-us.html">Max Performance</a>
+                      <a href="/contact-us">Max Performance</a>
                     </h2>
                     <div className="tg-service-content">
                       <p>
@@ -673,151 +731,60 @@ function Home() {
                 <div className="section-title section-title-two white-title mb-40">
                   <h2 className="title text-center">Ask question</h2>
                 </div>
-                <div className="accordion" id="accordionExample">
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingOne">
-                      <button
-                        className="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseOne"
-                        aria-expanded="true"
-                        aria-controls="collapseOne"
-                      >
-                        What makes MusclesXtrify supplements different?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseOne"
-                      className="accordion-collapse collapse show"
-                      aria-labelledby="headingOne"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          MusclesXtrify uses scientifically-backed ingredients
-                          that enhance muscle growth, strength, and recovery.
-                          Our formulations are designed for maximum
-                          effectiveness and purity.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingTwo">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"
-                        aria-expanded="false"
-                        aria-controls="collapseTwo"
-                      >
-                        How long does it take to see results?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseTwo"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingTwo"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Results vary, but most users begin noticing
-                          improvements in strength and recovery within 2-4 weeks
-                          of consistent use.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingThree">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"
-                        aria-expanded="false"
-                        aria-controls="collapseThree"
-                      >
-                        Are MusclesXtrify supplements safe to use?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseThree"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingThree"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Yes, our products are crafted with high-quality,
-                          natural ingredients and undergo rigorous testing to
-                          ensure safety and effectiveness.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFour">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFour"
-                        aria-expanded="false"
-                        aria-controls="collapseFour"
-                      >
-                        Can I take MusclesXtrify supplements with my current
-                        routine?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFour"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFour"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          Absolutely! Our supplements are designed to complement
-                          any workout or fitness regimen and enhance overall
-                          performance.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="accordion-item">
-                    <h2 className="accordion-header" id="headingFive">
-                      <button
-                        className="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseFive"
-                        aria-expanded="false"
-                        aria-controls="collapseFive"
-                      >
-                        Do your products contain artificial additives or
-                        fillers?
-                      </button>
-                    </h2>
-                    <div
-                      id="collapseFive"
-                      className="accordion-collapse collapse"
-                      aria-labelledby="headingFive"
-                      data-bs-parent="#accordionExample"
-                    >
-                      <div className="accordion-body">
-                        <p>
-                          No, we pride ourselves on offering clean, natural
-                          products free from artificial additives, fillers, and
-                          harmful chemicals.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <Accordion defaultActiveKey={["1"]} alwaysOpen>
+                  <Accordion.Item eventKey="1" className="mt-3 p-md-4 p-3">
+                    <Accordion.Header className="f-18 lp-2">
+                      What makes MusclesXtrify supplements different?
+                    </Accordion.Header>
+                    <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
+                      MusclesXtrify uses scientifically-backed ingredients that
+                      enhance muscle growth, strength, and recovery. Our
+                      formulations are designed for maximum effectiveness and
+                      purity.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="2" className="mt-3 p-md-4 p-3">
+                    <Accordion.Header className="f-18 lp-2">
+                      How long does it take to see results?
+                    </Accordion.Header>
+                    <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
+                      Results vary, but most users begin noticing improvements
+                      in strength and recovery within 2-4 weeks of consistent
+                      use.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="3" className="mt-3 p-md-4 p-3">
+                    <Accordion.Header className="f-18 lp-2">
+                      Are MusclesXtrify supplements safe to use?
+                    </Accordion.Header>
+                    <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
+                      Yes, our products are crafted with high-quality, natural
+                      ingredients and undergo rigorous testing to ensure safety
+                      and effectiveness.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="4" className="mt-3 p-md-4 p-3">
+                    <Accordion.Header className="f-18 lp-2 me-2">
+                      Can I take MusclesXtrify supplements with my current
+                      routine?
+                    </Accordion.Header>
+                    <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
+                      Absolutely! Our supplements are designed to complement any
+                      workout or fitness regimen and enhance overall
+                      performance.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                  <Accordion.Item eventKey="5" className="mt-3 p-md-4 p-3">
+                    <Accordion.Header className="f-18 lp-2">
+                      Do your products contain artificial additives or fillers?
+                    </Accordion.Header>
+                    <Accordion.Body className="mt-3 f-rob-reg f-14 lp-2">
+                      No, we pride ourselves on offering clean, natural products
+                      free from artificial additives, fillers, and harmful
+                      chemicals.
+                    </Accordion.Body>
+                  </Accordion.Item>
+                </Accordion>
               </div>
             </div>
           </div>

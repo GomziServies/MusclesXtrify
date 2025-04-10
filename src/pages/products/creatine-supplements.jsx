@@ -93,8 +93,8 @@ function PureGoCreatine() {
       if (!isLogin) {
         return openModal();
       }
-      
-        window.location.href = "/add-to-cart";
+
+      window.location.href = "/add-to-cart";
     } catch (error) {
       console.error(error);
     }
@@ -135,7 +135,7 @@ function PureGoCreatine() {
                   <nav aria-label="Breadcrumbs" className="breadcrumb-trail">
                     <ul className="breadcrumb">
                       <li className="breadcrumb-item trail-item trail-begin">
-                        <a href="index.html">
+                        <a href="/">
                           <span>Home</span>
                         </a>
                       </li>

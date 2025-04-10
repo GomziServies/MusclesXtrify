@@ -13,7 +13,7 @@ function NutritionHeader() {
   return (
     <>
       <div className="container-fluid main p-0 m-0">
-        <div className="d-lg-block d-none log">
+        <div className="d-lg-block d-none log-new">
           <Link to="/">
             <div>
               <img
@@ -24,7 +24,7 @@ function NutritionHeader() {
             </div>
           </Link>
         </div>
-        <div className="d-lg-none d-sm-block t0 log1">
+        <div className="d-lg-none d-sm-block t0 log1-new">
           <Link to="/">
             <div>
               <img
@@ -43,17 +43,17 @@ function NutritionHeader() {
               </Link>
             </li>
             <li>
-              <Link to="/fgiit/fitness-and-nutrition-courses">
-                <p className="m-0">Product</p>
+              <Link to="/about-us">
+                <p className="m-0">Products</p>
               </Link>
             </li>
             <li>
-              <Link to="/fgiit/online-fitness-courses">
+              <Link to="/about-us">
                 <p className="m-0">About Us</p>
               </Link>
             </li>
             <li>
-              <Link to="/fgiit/flexible-fitness-courses">
+              <Link to="/contact-us">
                 <p className="m-0">Contact Us</p>
               </Link>
             </li>
@@ -63,20 +63,31 @@ function NutritionHeader() {
           <span className="closebtn" onClick={sideclose}>
             ×
           </span>
-          <Link to="/" style={{ marginTop: 50 }}>
+          <Link
+            to="/nutrition"
+            style={{ marginTop: "50px", marginBottom: "30px" }}
+          >
             <img
               className="lazy"
-              src={
-                process.env.PUBLIC_URL + "../assets/images/logo/fg_group.webp"
-              }
-              width="17%"
+              src={process.env.PUBLIC_URL + "../assets/images/logo_01.png"}
+              width="40%"
               alt="Fg Group"
             />
           </Link>
-          <Link to="/">Home</Link>
-          <Link to="/fgiit/fitness-and-nutrition-courses">Product</Link>
-          <Link to="/fgiit/online-fitness-courses">About Us</Link>
-          <Link to="/fgiit/flexible-fitness-courses">Contact Us</Link>
+          <ul className="mobileUserInfo aa">
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/">Products</Link>
+            </li>
+            <li>
+              <Link to="/about-us">About Us</Link>
+            </li>
+            <li>
+              <Link to="/contact-us">Contact Us</Link>
+            </li>
+          </ul>
         </div>
         <span
           className="d-lg-none d-sm-block btnn"
@@ -85,18 +96,8 @@ function NutritionHeader() {
         >
           ☰
         </span>
-        <div className="d-lg-none d-sm-block mt-4">
-          <Link to="/user/order">
-            <div className="cart-btnn">
-              <img
-                src={
-                  process.env.PUBLIC_URL + "../assets/images/img/cart-img.webp"
-                }
-                width="21px"
-                alt="Fg Group"
-              />
-            </div>
-          </Link>
+        <div className="login d-lg-block d-none">
+          <ul></ul>
         </div>
       </div>
     </>

@@ -13,7 +13,7 @@ function HomeNutritionFooter() {
                   <div className="footer-widget">
                     <div className="footer-about">
                       <div className="footer-logo logo">
-                        <a href="index.html">
+                        <a href="/">
                           <img
                             src={
                               process.env.PUBLIC_URL +
@@ -38,16 +38,16 @@ function HomeNutritionFooter() {
                     <h4 className="fw-title">links</h4>
                     <ul className="list-wrap">
                       <li>
-                        <a href="index.html">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="index.html#supplement">Product</a>
+                        <a href="/supplement">Product</a>
                       </li>
                       <li>
-                        <a href="about-us.html">About Us</a>
+                        <a href="/about-us">About Us</a>
                       </li>
                       <li>
-                        <a href="contact-us.html">Contact Us</a>
+                        <a href="/contact-us">Contact Us</a>
                       </li>
                     </ul>
                   </div>
