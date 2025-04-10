@@ -7724,3 +7724,12 @@ body.search-visible {
 .order__info-wrap p a {
   text-decoration: underline;
 }
+
+.selectbtn {
+  background: #e51d2845;
+  border: 2px solid #e51d2845 !important;
+  border-radius: 7px;
+  color: #3b3b3b !important;
+  margin: 0 5px;
+  padding: 5px 12px;
+}

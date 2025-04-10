@@ -15,8 +15,6 @@ import "../../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../../components/partials/Footer/footer";
-import { axiosInstance } from "../../assets/js/config/api";
-import LoginModal from "../../assets/js/popup/login";
 import LoadingComponent from "../../components/loadingComponent";
 
 function AddToCart() {
@@ -42,9 +40,10 @@ function AddToCart() {
   const fetchProductData = async () => {
     setLoading(true);
     try {
-      const response = await axiosInstance.get(
-        "/order-cart/get-carts?item_type=PURE_GO_MEAL_PRODUCT&is_purchase=true"
-      );
+      let response
+      //  = await axiosInstance.get(
+      //   "/order-cart/get-carts?item_type=PURE_GO_MEAL_PRODUCT&is_purchase=true"
+      // );
       const serverData = response.data.data[0];
       setServerDataID(serverData._id);
       const existingData = JSON.parse(
@@ -111,9 +110,9 @@ function AddToCart() {
 
   const handleRemoveProduct = async (cart_id, product_id) => {
     try {
-      await axiosInstance.delete(
-        `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`
-      );
+      // await axiosInstance.delete(
+      //   `/order-cart/remove-item?item_id=${product_id}&cart_id=${serverDataID}`
+      // );
       setProductDataGet((prevData) =>
         prevData.filter((product) => product._id !== cart_id)
       );
@@ -186,7 +185,7 @@ function AddToCart() {
 
   const handleUpdateCart = async (updatedData) => {
     try {
-      await axiosInstance.post("/order-cart/add-item", updatedData[0]);
+      // await axiosInstance.post("/order-cart/add-item", updatedData[0]);
     } catch (error) {
       console.error("Error adding to cart:", error);
     }
@@ -211,10 +210,11 @@ function AddToCart() {
           quantity: product.quantity,
         }));
 
-        const response = await axiosInstance.post(
-          "/order-cart/add-item",
-          changedProducts[0]
-        );
+        let response
+        //  = await axiosInstance.post(
+        //   "/order-cart/add-item",
+        //   changedProducts[0]
+        // );
 
         if (response.data.status === 200) {
           setPreviousProductData(productDataGet);
@@ -318,7 +318,6 @@ function AddToCart() {
         </script>
       </Helmet>
       {/* <LoaderComponent /> */}
-      {showModal && <LoginModal onClose={closeModal} />}
       {(loading || loading1) && <LoadingComponent />}
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">

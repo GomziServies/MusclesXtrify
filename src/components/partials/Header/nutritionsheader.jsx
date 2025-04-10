@@ -1,6 +1,4 @@
 import React from "react";
-import UserInfo from "../../../assets/js/menu/userInfo";
-import MobileUserInfo from "../../../assets/js/menu/mobileUserInfo";
 import { Link } from "react-router-dom";
 
 function NutritionHeader() {

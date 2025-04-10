@@ -15,14 +15,9 @@ import "../../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../../components/partials/Footer/footer";
-import NutritionReviewSection from "../../components/partials/review/nutrition-review";
-import { axiosInstance } from "../../assets/js/config/api";
-import HowToUse from "../../components/howToUse";
 import SelectableList from "../../components/SelectableList";
-import Review from "../../components/review";
 import ProductPhotoSection1 from "../../components/ProductPhotoSection1";
 import { useLocation } from "react-router";
-import LoginModal from "../../assets/js/popup/login";
 
 function PureGoWheyProtein() {
   const location = useLocation();
@@ -47,22 +42,28 @@ function PureGoWheyProtein() {
 
   const productImages = {
     "1kg-Chocolate": [
-      "/assets/images/products/whey-protein/whey-protein-chocolate-1.webp",
-      "/assets/images/products/whey-protein/whey-protein-chocolate-2.webp",
-      "/assets/images/products/whey-protein/whey-protein-chocolate-3.webp",
-      "/assets/images/products/whey-protein/whey-protein-chocolate-4.webp",
+      "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-1.jpg",
+      "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-2.jpg",
+      "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-3.jpg",
+      "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-4.jpg",
     ],
     "1kg-Mocha Coffee": [
-      "/assets/images/products/whey-protein/whey-protein-mochacoffee-1.webp",
-      "/assets/images/products/whey-protein/whey-protein-mochacoffee-2.webp",
-      "/assets/images/products/whey-protein/whey-protein-mochacoffee-3.webp",
-      "/assets/images/products/whey-protein/whey-protein-mochacoffee-4.webp",
+      "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-1.jpg",
+      "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-2.jpg",
+      "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-3.jpg",
+      "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-4.jpg",
     ],
-    "1kg-Mawa Kulfi": [
-      "/assets/images/products/whey-protein/whey-protein-mawakulfi-1.webp",
-      "/assets/images/products/whey-protein/whey-protein-mawakulfi-2.webp",
-      "/assets/images/products/whey-protein/whey-protein-mawakulfi-3.webp",
-      "/assets/images/products/whey-protein/whey-protein-mawakulfi-4.webp",
+    "2kg-Chocolate": [
+      "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-1.jpg",
+      "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-2.jpg",
+      "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-3.jpg",
+      "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-4.jpg",
+    ],
+    "2kg-Mocha Coffee": [
+      "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-1.jpg",
+      "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-2.jpg",
+      "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-3.jpg",
+      "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-4.jpg",
     ],
   };
 
@@ -71,10 +72,10 @@ function PureGoWheyProtein() {
       key: "1kg-Chocolate",
       data: {
         id: "67e7749163f930dcc6a2715d",
-        img: "/assets/images/products/whey-protein/whey-protein-chocolate-1.webp",
+        img: "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-1.jpg",
         name: "Whey Protein 1kg Chocolate",
-        price: "3000",
-        discount: "1250",
+        price: "3500",
+        // discount: "1250",
         size: "1 Kg",
         dis_point: "15%",
       },
@@ -83,34 +84,48 @@ function PureGoWheyProtein() {
       key: "1kg-Mocha Coffee",
       data: {
         id: "67e774c463f930dcc6a27161",
-        img: "/assets/images/products/whey-protein/whey-protein-mochacoffee-1.webp",
+        img: "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-1.jpg",
         name: "Whey Protein 1kg Mocha Coffee",
-        price: "3000",
-        discount: "1250",
+        price: "3500",
+        // discount: "1250",
         size: "1 Kg",
         dis_point: "15%",
       },
     },
     {
-      key: "1kg-Mawa Kulfi",
+      key: "2kg-Chocolate",
       data: {
-        id: "67e774a963f930dcc6a2715f",
-        img: "/assets/images/products/whey-protein/whey-protein-mawakulfi-1.webp",
-        name: "Whey Protein 1kg Mawa Kulfi",
-        price: "3000",
-        discount: "1250",
-        size: "1 Kg",
+        id: "67e7749163f930dcc6a2715d",
+        img: "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-1.jpg",
+        name: "Whey Protein 2kg Chocolate",
+        price: "7000",
+        // discount: "1250",
+        size: "2 Kg",
+        dis_point: "15%",
+      },
+    },
+    {
+      key: "2kg-Mocha Coffee",
+      data: {
+        id: "67e774c463f930dcc6a27161",
+        img: "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-1.jpg",
+        name: "Whey Protein 2kg Mocha Coffee",
+        price: "7000",
+        // discount: "1250",
+        size: "2 Kg",
         dis_point: "15%",
       },
     },
   ];
 
-  const sizeOptions = [{ id: "1kg", label: "1kg" }];
+  const sizeOptions = [
+    { id: "1kg", label: "1kg" },
+    { id: "2kg", label: "2kg" },
+  ];
 
   const flavorOptions = [
     { id: "Chocolate", label: "Chocolate" },
     { id: "Mocha Coffee", label: "Mocha Coffee" },
-    { id: "Mawa Kulfi", label: "Mawa Kulfi" },
   ];
 
   const handleSelectSize = (id) => {
@@ -142,11 +157,12 @@ function PureGoWheyProtein() {
       if (!isLogin) {
         return openModal();
       }
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: product_id,
-        quantity: 1,
-        item_type: "PURE_GO_MEAL_PRODUCT",
-      });
+      let response
+      //  = await axiosInstance.post("/order-cart/add-item", {
+      //   item_id: product_id,
+      //   quantity: 1,
+      //   item_type: "PURE_GO_MEAL_PRODUCT",
+      // });
       if (response.data.response === "OK") {
         window.location.href = "/add-to-cart";
       }
@@ -185,7 +201,6 @@ function PureGoWheyProtein() {
         <link rel="canonical" href={{ canonicalUrl }} />
       </Helmet>
       {/* <LoaderComponent /> */}
-      {showModal && <LoginModal onClose={closeModal} />}
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">
         <i className="fas fa-angle-up"></i>
@@ -216,7 +231,7 @@ function PureGoWheyProtein() {
                   <div className="inner-shop-details-meta">
                     <ul className="list-wrap">
                       <li>
-                        Brands : <a href="shop.html">Pure-Go</a>
+                        Brands : <a href="shop.html">MusclesXtrify</a>
                       </li>
                       <li className="inner-shop-details-review">
                         <div className="rating">
@@ -232,19 +247,15 @@ function PureGoWheyProtein() {
                   </div>
                   <div className="inner-shop-details-price">
                     <h2 className="price d-flex">
-                      ₹{currentProductData.discount}/-
+                      {/* ₹{currentProductData.discount}/- */}
                       <span className="old-prices">
                         ₹{currentProductData.price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">58%</h5>
+                    <h5 className="stock-status">- In Stock</h5>
                   </div>
                   <p>
-                    Pure Go Whey Protein is a Mixture of Whey Isolate, Whey
-                    Concentrate, Skimmed Milk powder, Soy protein isolate and
-                    plant protein. It is packed with 24g of 100% High Quality
-                    whey protein per serving (30g scoop). The benchmark and
-                    premium source of protein powders.
+                  MusclesXtrify Whey Protein Chocolate 1kg delivers high-quality protein to fuel muscle growth, enhance recovery, and boost strength. With a rich chocolate flavor, it's perfect for athletes and fitness enthusiasts looking to optimize performance. Packed with essential amino acids, it supports lean muscle development and faster post-workout recovery. This protein blend helps you achieve your fitness goals with great taste and superior nutrition.
                   </p>
                   <div>
                     <SelectableList
@@ -300,48 +311,25 @@ function PureGoWheyProtein() {
                       aria-labelledby="description-tab"
                     >
                       <div className="product-desc-content">
-                        <h4 className="title">Whey Protein</h4>
+                        <h4 className="title">The true strength of MusclesXtrify :</h4>
                         <p>
-                          Pure Go Whey Protein is a Mixture of Whey Isolate,
-                          Whey Concentrate, Skimmed Milk powder, Soy protein
-                          isolate and plant protein. It is packed with 24g of
-                          100% High Quality whey protein per serving (30g
-                          scoop). The benchmark and premium source of protein
-                          powders. Each serving delivers an excellent course of
-                          naturally occurring essential amino acids and Branch
-                          Chain Amino Acids (BCAA's). The protein found in
-                          Performance Whey Blend help support the growth and
-                          maintenance of lean muscle mass, ideal for everyone.
+                        MusclesXtrify Nutrition Whey Protein is a Mixture of Whey Isolate, Whey Concentrate, Skimmed Milk powder, Soy protein isolate and plant protein. It is packed with 24g of 100% High Quality whey protein per serving (30g scoop). The benchmark and premium source of protein powders. Each serving delivers an excellent course of naturally occurring essential amino acids and Branch Chain Amino Acids (BCAA's). The protein found in Performance Whey Blend help support the growth and maintenance of lean muscle mass, ideal for everyone.
                         </p>
                         <h4 className="title">
-                          BETTER INGREDIENTS = BETTER RESULTS
+                        BETTER INGREDIENTS = BETTER RESULTS
                         </h4>
-                        <h4 className="title">NO COLORS:</h4>
+                        <h4 className="title">
+                        MusclesXtrify the basics :
+                        </h4>
+                        <ul>
+                          <li>NO COLORS: MusclesXtrify Nutrition Whey Protein does not contain any COLOR or PRESERVATIVES.</li>
+                          <li>NO ADDED SUGAR: MusclesXtrify Nutrition Whey Protein does not Contain any Added SUGAR.</li>
+                          <li>CONTAINS SUCRALOSE: It also contains SUCRALOSE as a sweetening agent and may taste bitter due to its natural properties.</li>
+                          <li>TRUSTIFIED CERTIFIED: Blind Testing for Protein & Macro Accuracy, Tested for Amino Spiking & Heavy Metals.</li>
+                        </ul>
+                        <h4 className="title">DIRECTIONS :</h4>
                         <p>
-                          Pure Go Whey Protein does not contain any COLOR or
-                          PRESERVATIVES.
-                        </p>
-                        <h4 className="title">NO ADDED SUGAR:</h4>
-                        <p>
-                          Pure Go Whey Protein does not Contain any Added SUGAR.
-                        </p>
-                        <h4 className="title">CONTAINS SUCRALOSE:</h4>
-                        <p>
-                          It also contains SUCRALOSE as a sweetening agent and
-                          may taste bitter due to its natural properties.
-                        </p>
-                        <h4 className="title">TRUSTIFIED CERTIFIED:</h4>
-                        <p>
-                          Blind Testing for Protein & Macro Accuracy, Tested for
-                          Amino Spiking & Heavy Metals.
-                        </p>
-                        <h4 className="title">DIRECTIONS:</h4>
-                        <p>
-                          Add one rounded scoop (30 gm) of Whey Protein to 180 -
-                          200 ml of your favorite liquid such as water, skim
-                          milk or almond milk. Stir with a spoon or shake in a
-                          shaker for 20-25 seconds until protein powder fully
-                          dissolves.
+                        Add one rounded scoop (30 gm) of Whey Protein to 180 - 200 ml of your favorite liquid such as water, skim milk or almond milk. Stir with a spoon or shake in a shaker for 20-25 seconds until protein powder fully dissolves.
                         </p>
                       </div>
                     </div>
@@ -355,44 +343,40 @@ function PureGoWheyProtein() {
                         <table className="table table-sm">
                           <tbody>
                             <tr>
-                              <th scope="row">Calories</th>
-                              <td>110</td>
+                              <th scope="row">Energy (kcal)</th>
+                              <td>132.38</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Fat</th>
-                              <td>1kg</td>
+                              <th scope="row">Total Protein (g)</th>
+                              <td>24.00</td>
                             </tr>
                             <tr>
-                              <th scope="row">Saturated Fat</th>
-                              <td>0.5g</td>
+                              <th scope="row">Carbohydrates (g)</th>
+                              <td>4.90</td>
                             </tr>
                             <tr>
-                              <th scope="row">Cholesterol</th>
-                              <td>40mg</td>
+                              <th scope="row">Added Sugar (g)</th>
+                              <td>0</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Carbohydrate</th>
-                              <td>2g</td>
+                              <th scope="row">Dietary Fibre (g)</th>
+                              <td>2.07</td>
                             </tr>
                             <tr>
-                              <th scope="row">Protein</th>
-                              <td>24g</td>
+                              <th scope="row">Total Fat (g)</th>
+                              <td>1.14</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Sugars</th>
-                              <td>2g</td>
+                              <th scope="row">Cholesterol (g)</th>
+                              <td>0.02</td>
                             </tr>
                             <tr>
-                              <th scope="row">Sodium</th>
-                              <td>100mg</td>
+                              <th scope="row">Potassium (mg)</th>
+                              <td>184.3</td>
                             </tr>
                             <tr>
-                              <th scope="row">Calcium</th>
-                              <td>140 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Potassium</th>
-                              <td>160 mg</td>
+                              <th scope="row">Sodium (mg)</th>
+                              <td>158.0</td>
                             </tr>
                           </tbody>
                         </table>
@@ -431,96 +415,45 @@ function PureGoWheyProtein() {
                       <div className="product-desc-content">
                         <table className="table table-sm">
                           <tbody>
-                            <tr>
-                              <th scope="row">Calories</th>
-                              <td>110</td>
+                          <tr>
+                              <th scope="row">Energy (kcal)</th>
+                              <td>132.38</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Fat</th>
-                              <td>1kg</td>
+                              <th scope="row">Total Protein (g)</th>
+                              <td>24.00</td>
                             </tr>
                             <tr>
-                              <th scope="row">Saturated Fat</th>
-                              <td>0.5g</td>
+                              <th scope="row">Carbohydrates (g)</th>
+                              <td>4.90</td>
                             </tr>
                             <tr>
-                              <th scope="row">Cholesterol</th>
-                              <td>40mg</td>
+                              <th scope="row">Added Sugar (g)</th>
+                              <td>0</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Carbohydrate</th>
-                              <td>2g</td>
+                              <th scope="row">Dietary Fibre (g)</th>
+                              <td>2.07</td>
                             </tr>
                             <tr>
-                              <th scope="row">Protein</th>
-                              <td>24g</td>
+                              <th scope="row">Total Fat (g)</th>
+                              <td>1.14</td>
                             </tr>
                             <tr>
-                              <th scope="row">Total Sugars</th>
-                              <td>2g</td>
+                              <th scope="row">Cholesterol (g)</th>
+                              <td>0.02</td>
                             </tr>
                             <tr>
-                              <th scope="row">Sodium</th>
-                              <td>100mg</td>
+                              <th scope="row">Potassium (mg)</th>
+                              <td>184.3</td>
                             </tr>
                             <tr>
-                              <th scope="row">Calcium</th>
-                              <td>140 mg</td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Potassium</th>
-                              <td>160 mg</td>
+                              <th scope="row">Sodium (mg)</th>
+                              <td>158.0</td>
                             </tr>
                           </tbody>
                         </table>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <HowToUse
-          src1="step-1.mp4"
-          src2="step-2.mp4"
-          src3="step-3.mp4"
-          src4="step-4.mp4"
-          step1="Add 300 ml of water/milk"
-          step2="Mix 1 scoop of Protein"
-        />
-        <Review />
-        <section className="inner-shop-details-area">
-          <div className="container">
-            <div className="row">
-              <div className="col-12">
-                <div className="product-desc-wrap">
-                  <ul className="nav nav-tabs" id="myTabTwo" role="tablist">
-                    <li className="nav-item">
-                      <a
-                        href="#"
-                        className="nav-link active"
-                        id="review-tab"
-                        data-bs-toggle="tab"
-                        data-bs-target="#review"
-                        role="tab"
-                        aria-controls="review"
-                        aria-selected="false"
-                      >
-                        Reviews
-                      </a>
-                    </li>
-                  </ul>
-                  <div className="tab-content" id="myTabContentTwo">
-                    <div
-                      className="tab-pane fade show active"
-                      id="review"
-                      role="tabpanel"
-                      aria-labelledby="review-tab"
-                    >
-                      <NutritionReviewSection
-                        product_id={products[0].data.id}
-                      />
                     </div>
                   </div>
                 </div>

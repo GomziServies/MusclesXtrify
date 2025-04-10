@@ -16,13 +16,8 @@ import "../../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../../components/partials/Footer/footer";
-import NutritionReviewSection from "../../components/partials/review/nutrition-review";
-import { axiosInstance } from "../../assets/js/config/api";
-import HowToUse from "../../components/howToUse";
 import SelectableList from "../../components/SelectableList";
-import Review from "../../components/review";
 import ProductPhotoSection1 from "../../components/ProductPhotoSection1";
-import LoginModal from "../../assets/js/popup/login";
 
 function PureGoCreatine() {
   const canonicalUrl = window.location.href;
@@ -98,14 +93,8 @@ function PureGoCreatine() {
       if (!isLogin) {
         return openModal();
       }
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: product_id,
-        quantity: 1,
-        item_type: "PURE_GO_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
+      
         window.location.href = "/add-to-cart";
-      }
     } catch (error) {
       console.error(error);
     }
@@ -132,7 +121,6 @@ function PureGoCreatine() {
         <link rel="canonical" href={{ canonicalUrl }} />
       </Helmet>
       {/* <LoaderComponent /> */}
-      {showModal && <LoginModal onClose={closeModal} />}
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">
         <i className="fas fa-angle-up"></i>

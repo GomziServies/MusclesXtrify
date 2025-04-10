@@ -32,3 +32,4 @@ function WhatsappHeaderApp({ message, options }) {
 }
 
 export default WhatsappHeaderApp;
+

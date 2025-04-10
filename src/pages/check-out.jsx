@@ -2,10 +2,7 @@ import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { useLocation } from "react-router";
 import { Helmet } from "react-helmet";
-import { axiosInstance } from "../assets/js/config/api";
-import { createPaymentProduct } from "../assets/js/utils/product";
 import NutritionHeader from "../components/partials/Header/nutritionsheader";
-import LoginModal from "../assets/js/popup/login";
 import LoadingComponent from "../components/loadingComponent";
 
 function CheckOut() {
@@ -113,14 +110,14 @@ function CheckOut() {
       }
       try {
         const coupon_ids = [prepaidCouponCode._id].filter(Boolean);
-        await createPaymentProduct(
-          item_id
-            ? [{ product_id: "670a5a7b9a7dbcdce616398d", quantity: 1 }]
-            : productDatas,
-          updatedUserData,
-          coupon_ids,
-          payment_mode
-        );
+        // await createPaymentProduct(
+        //   item_id
+        //     ? [{ product_id: "670a5a7b9a7dbcdce616398d", quantity: 1 }]
+        //     : productDatas,
+        //   updatedUserData,
+        //   coupon_ids,
+        //   payment_mode
+        // );
       } catch (error) {
         console.error("Error during order:", error);
       }
@@ -134,7 +131,7 @@ function CheckOut() {
 
   const updateUserData = async (data) => {
     try {
-      await axiosInstance.post("/account/update-profile", data);
+      // await axiosInstance.post("/account/update-profile", data);
       getUserData();
     } catch (error) {
       console.error("Error in updateUserData:", error);
@@ -172,21 +169,21 @@ function CheckOut() {
 
   const getUserData = async () => {
     try {
-      const response = await axiosInstance.get("/account/profile");
-      const userData = response.data.data;
-      if (userData) {
-        setUserData({
-          pin_code: userData.user?.address?.pin_code || "",
-          address_line_1: userData.user?.address?.address_line_1 || "",
-          address_line_2: userData.user?.address?.address_line_2 || "",
-          city: userData.user?.address?.city || "",
-          email: userData.user?.email || "",
-          first_name: userData.user?.first_name || "",
-          last_name: userData.user?.last_name || "",
-          state: userData.user?.address?.state || "",
-          country: userData.user?.address?.country || "",
-        });
-      }
+      // const response = await axiosInstance.get("/account/profile");
+      // const userData = response.data.data;
+      // if (userData) {
+      //   setUserData({
+      //     pin_code: userData.user?.address?.pin_code || "",
+      //     address_line_1: userData.user?.address?.address_line_1 || "",
+      //     address_line_2: userData.user?.address?.address_line_2 || "",
+      //     city: userData.user?.address?.city || "",
+      //     email: userData.user?.email || "",
+      //     first_name: userData.user?.first_name || "",
+      //     last_name: userData.user?.last_name || "",
+      //     state: userData.user?.address?.state || "",
+      //     country: userData.user?.address?.country || "",
+      //   });
+      // }
     } catch (error) {
       console.error("Error in getUserData:", error);
     }
@@ -224,7 +221,6 @@ function CheckOut() {
         />
         <link rel="canonical" href={{ canonicalUrl }} />
       </Helmet>
-      {showModal && <LoginModal onClose={closeModal} />}
       {loading && <LoadingComponent />}
       <NutritionHeader />
       <main className="main-area fix">

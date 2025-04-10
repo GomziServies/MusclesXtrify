@@ -15,16 +15,7 @@ import "../assets/css/slick.css";
 import "../assets/css/style.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import { Accordion } from "react-bootstrap";
 import HomeNutritionFooter from "../components/partials/Footer/footer";
-import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
-import ModalVideo from "react-modal-video";
-import { Link } from "react-router-dom";
-import HappyClientReview from "../components/happyClient";
-import { axiosInstance } from "../assets/js/config/api";
-import LoginModal from "../assets/js/popup/login";
 
 function Home() {
   const canonicalUrl = window.location.href;
@@ -114,14 +105,14 @@ function Home() {
       if (!isLogin) {
         return openModal();
       }
-      const response = await axiosInstance.post("/order-cart/add-item", {
-        item_id: product_id,
-        quantity: 1,
-        item_type: "PURE_GO_MEAL_PRODUCT",
-      });
-      if (response.data.response === "OK") {
-        window.location.href = "/add-to-cart";
-      }
+      // const response = await axiosInstance.post("/order-cart/add-item", {
+      //   item_id: product_id,
+      //   quantity: 1,
+      //   item_type: "PURE_GO_MEAL_PRODUCT",
+      // });
+      // if (response.data.response === "OK") {
+      //   window.location.href = "/add-to-cart";
+      // }
     } catch (error) {
       console.error(error);
     }
@@ -204,7 +195,6 @@ function Home() {
           `}
         </script>
       </Helmet>
-      {showModal && <LoginModal onClose={closeModal} />}
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">
         <i className="fas fa-angle-up"></i>
@@ -423,7 +413,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="creatine-supplements">
+                      <a href="whey-protein-powder">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -435,7 +425,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="creatine-supplements">
+                        <a href="whey-protein-powder">
                           Whey Protein Chocolate-1kg
                         </a>
                       </h4>
@@ -446,7 +436,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="creatine-supplements">
+                      <a href="whey-protein-powder">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -458,7 +448,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="creatine-supplements">
+                        <a href="whey-protein-powder">
                           Whey Protein Mocha Coffee-1kg
                         </a>
                       </h4>
@@ -469,7 +459,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="creatine-supplements">
+                      <a href="whey-protein-powder">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -481,8 +471,31 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="creatine-supplements">
+                        <a href="whey-protein-powder">
                           Whey Protein Chocolate-2kg
+                        </a>
+                      </h4>
+                      <div className="tg-shop-price">₹ 7,000/-</div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-6">
+                  <div className="tg-shop-item text-center">
+                    <div className="tg-shop-thumb">
+                      <a href="whey-protein-powder">
+                        <img
+                          src={
+                            process.env.PUBLIC_URL +
+                            "/assets/images/tg_shop04.jpg"
+                          }
+                          alt="img"
+                        />
+                      </a>
+                    </div>
+                    <div className="tg-shop-content">
+                      <h4 className="title">
+                        <a href="whey-protein-powder">
+                          Whey Protein Mocha Coffee-2kg
                         </a>
                       </h4>
                       <div className="tg-shop-price">₹ 7,000/-</div>
@@ -496,29 +509,6 @@ function Home() {
                         <img
                           src={
                             process.env.PUBLIC_URL +
-                            "/assets/images/tg_shop04.jpg"
-                          }
-                          alt="img"
-                        />
-                      </a>
-                    </div>
-                    <div className="tg-shop-content">
-                      <h4 className="title">
-                        <a href="creatine-supplements">
-                          Whey Protein Mocha Coffee-2kg
-                        </a>
-                      </h4>
-                      <div className="tg-shop-price">₹ 7,000/-</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-lg-6 col-md-6">
-                  <div className="tg-shop-item text-center">
-                    <div className="tg-shop-thumb">
-                      <a href="creatine.html">
-                        <img
-                          src={
-                            process.env.PUBLIC_URL +
                             "/assets/images/tg_shop05.jpg"
                           }
                           alt="img"
@@ -527,7 +517,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="creatine.html">Creatine Monohydrate</a>
+                        <a href="creatine-supplements">Creatine Monohydrate</a>
                       </h4>
                       <div className="tg-shop-price">₹ 1,800/-</div>
                     </div>
@@ -536,7 +526,7 @@ function Home() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="pre-workout.html">
+                      <a href="pre-workout">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -548,7 +538,7 @@ function Home() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="pre-workout.html">MusclesXtrify Pre Workout</a>
+                        <a href="pre-workout">MusclesXtrify Pre Workout</a>
                       </h4>
                       <div className="tg-shop-price">₹ 2,500/-</div>
                     </div>
