@@ -35,45 +35,11 @@ function ContactUs() {
           content="https://purego.gomzilifesciences.in/"
         />
         <link rel="canonical" href={{ canonicalUrl }} />
-
-        <link rel="preconnect" href="https://connect.facebook.net" />
-        <script>
-          {`
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '1144699046738070');
-            fbq('track', 'PageView');
-          `}
-        </script>
-        <noscript>
-          {`<img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=1144699046738070&ev=PageView&noscript=1"
-          />`}
-        </noscript>
         <link
           rel="preload"
           href={`${process.env.PUBLIC_URL}/assets/process.env.PUBLIC_URL +  "/assets/images/nutrition/nutrition-banner-inner-14.webp`}
           as="image"
         />
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-J50WNKGW38"
-        ></script>
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-J50WNKGW38');
-          `}
-        </script>
       </Helmet>
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">
