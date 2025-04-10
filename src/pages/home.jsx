@@ -194,7 +194,7 @@ function Home() {
                     className="tg-banner-btn wow fadeInUp"
                     data-wow-delay=".8s"
                   >
-                    <a href="#supplement" className="tg-btn">
+                    <a href="/supplements" className="tg-btn">
                       Know More
                     </a>
                   </div>
@@ -328,7 +328,7 @@ function Home() {
                       performance, and support recovery for maximum fitness
                       results.
                     </p>
-                    <a href="/about-us" className="tg-btn view-btn">
+                    <a href="/supplements" className="tg-btn view-btn">
                       VIEW more
                     </a>
                   </div>
@@ -371,7 +371,7 @@ function Home() {
                     products. Experience maximum results and take your fitness
                     journey to the next level with MusclesXtrify today!.
                   </p>
-                  <a href="/about-us" className="tg-btn">
+                  <a href="/supplements" className="tg-btn">
                     VIEW more
                   </a>
                 </div>
