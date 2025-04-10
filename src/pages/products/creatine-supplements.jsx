@@ -18,6 +18,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../../components/partials/Footer/footer";
 import SelectableList from "../../components/SelectableList";
 import ProductPhotoSection1 from "../../components/ProductPhotoSection1";
+import CourseButtonsContainer from "../../components/CourseButtonsContainer";
 
 function PureGoCreatine() {
   const canonicalUrl = window.location.href;
@@ -28,6 +29,7 @@ function PureGoCreatine() {
   const [opacity, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -50,7 +52,6 @@ function PureGoCreatine() {
     {
       key: "250g-Lemon",
       data: {
-        id: "67e773f463f930dcc6a27155",
         img: "/assets/images/creatine/creatine-1.jpg",
         name: "Creatine Monohydrate",
         price: "1800",
@@ -87,18 +88,18 @@ function PureGoCreatine() {
   const currentProductData =
     products.find((product) => product.key === currentProduct)?.data || {};
 
-  const addProductInCart = async (product_id) => {
-    try {
-      const isLogin = localStorage.getItem("fg_group_user_authorization");
-      if (!isLogin) {
-        return openModal();
-      }
+  // const addProductInCart = async (product_id) => {
+  //   try {
+  //     const isLogin = localStorage.getItem("fg_group_user_authorization");
+  //     if (!isLogin) {
+  //       return openModal();
+  //     }
 
-      window.location.href = "/add-to-cart";
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  //     window.location.href = "/add-to-cart";
+  //   } catch (error) {
+  //     console.error(error);
+  //   }
+  // };
 
   return (
     <>
@@ -224,14 +225,11 @@ function PureGoCreatine() {
                       title="Flavor"
                     />
                   </div>
-                  <div className="inner-shop-perched-info mt-3">
-                    <button
-                      onClick={() => addProductInCart(products[0].data.id)}
-                      className="cart-btn"
-                    >
-                      add to cart
-                    </button>
-                  </div>
+                  <CourseButtonsContainer
+                    currentProductData={currentProductData}
+                    menuOpen={menuOpen}
+                    setMenuOpen={setMenuOpen}
+                  />
                 </div>
               </div>
             </div>
@@ -241,7 +239,7 @@ function PureGoCreatine() {
                   <ul className="nav nav-tabs" id="myTabTwo" role="tablist">
                     <li className="nav-item">
                       <a
-                        href="#"
+                        href="creatine-supplements"
                         className="nav-link active"
                         id="description-tab"
                         data-bs-toggle="tab"

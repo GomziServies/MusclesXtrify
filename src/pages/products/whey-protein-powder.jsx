@@ -18,6 +18,7 @@ import HomeNutritionFooter from "../../components/partials/Footer/footer";
 import SelectableList from "../../components/SelectableList";
 import ProductPhotoSection1 from "../../components/ProductPhotoSection1";
 import { useLocation } from "react-router";
+import CourseButtonsContainer from "../../components/CourseButtonsContainer";
 
 function PureGoWheyProtein() {
   const location = useLocation();
@@ -31,6 +32,7 @@ function PureGoWheyProtein() {
   const [opacity, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -71,7 +73,6 @@ function PureGoWheyProtein() {
     {
       key: "1kg-Chocolate",
       data: {
-        id: "67e7749163f930dcc6a2715d",
         img: "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-1.jpg",
         name: "Whey Protein 1kg Chocolate",
         price: "3500",
@@ -83,7 +84,6 @@ function PureGoWheyProtein() {
     {
       key: "1kg-Mocha Coffee",
       data: {
-        id: "67e774c463f930dcc6a27161",
         img: "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-1.jpg",
         name: "Whey Protein 1kg Mocha Coffee",
         price: "3500",
@@ -95,7 +95,6 @@ function PureGoWheyProtein() {
     {
       key: "2kg-Chocolate",
       data: {
-        id: "67e7749163f930dcc6a2715d",
         img: "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-1.jpg",
         name: "Whey Protein 2kg Chocolate",
         price: "7000",
@@ -107,7 +106,6 @@ function PureGoWheyProtein() {
     {
       key: "2kg-Mocha Coffee",
       data: {
-        id: "67e774c463f930dcc6a27161",
         img: "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-1.jpg",
         name: "Whey Protein 2kg Mocha Coffee",
         price: "7000",
@@ -273,14 +271,11 @@ function PureGoWheyProtein() {
                       title="Flavor"
                     />
                   </div>
-                  <div className="inner-shop-perched-info mt-3">
-                    <button
-                      onClick={() => addProductInCart(currentProductData.id)}
-                      className="cart-btn"
-                    >
-                      add to cart
-                    </button>
-                  </div>
+                  <CourseButtonsContainer
+                    currentProductData={currentProductData}
+                    menuOpen={menuOpen}
+                    setMenuOpen={setMenuOpen}
+                  />
                 </div>
               </div>
             </div>

@@ -177,7 +177,7 @@ function Home() {
                 >
                   <img
                     src={
-                      process.env.PUBLIC_URL + "/assets/images/banner_img.webp"
+                      process.env.PUBLIC_URL + "/assets/images/banner_img.png"
                     }
                     alt="img"
                   />

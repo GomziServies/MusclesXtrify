@@ -17,6 +17,7 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import HomeNutritionFooter from "../../components/partials/Footer/footer";
 import SelectableList from "../../components/SelectableList";
 import ProductPhotoSection1 from "../../components/ProductPhotoSection1";
+import CourseButtonsContainer from "../../components/CourseButtonsContainer";
 
 function PureGoPreWorkout() {
   const canonicalUrl = window.location.href;
@@ -27,6 +28,7 @@ function PureGoPreWorkout() {
   const [opacity, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const openModal = () => {
     setShowModal(true);
@@ -49,7 +51,6 @@ function PureGoPreWorkout() {
     {
       key: "250g-Watermelon",
       data: {
-        id: "67e7742d63f930dcc6a27159",
         img: "/assets/images/pre-workout/pre-workout-1.jpg",
         name: "EAA Powder",
         price: "2099",
@@ -233,14 +234,11 @@ function PureGoPreWorkout() {
                       title="Flavor"
                     />
                   </div>
-                  <div className="inner-shop-perched-info mt-3">
-                    <button
-                      onClick={() => addProductInCart(products[0].data.id)}
-                      className="cart-btn"
-                    >
-                      add to cart
-                    </button>
-                  </div>
+                  <CourseButtonsContainer
+                    currentProductData={currentProductData}
+                    menuOpen={menuOpen}
+                    setMenuOpen={setMenuOpen}
+                  />
                 </div>
               </div>
             </div>
