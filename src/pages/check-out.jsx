@@ -1,22 +1,15 @@
 import React, { useEffect, useState } from "react";
 import Swal from "sweetalert2";
-import { useLocation } from "react-router";
 import { Helmet } from "react-helmet";
 import NutritionHeader from "../components/partials/Header/nutritionsheader";
 import LoadingComponent from "../components/loadingComponent";
+import emailjs from '@emailjs/browser';
 
 function CheckOut() {
-  const location = useLocation();
-  const searchParams = new URLSearchParams(location.search);
-  const item_id = searchParams.get("item_id");
-  const [totalPrice, setTotalPrice] = useState();
-  const [productDatas, setProductDatas] = useState([[]]);
-  const [paymentMode, setPaymentMode] = useState("ONLINE");
-  const productData = localStorage.getItem("productsData");
-  const [isOpen, setIsOpen] = useState(false);
+  const [paymentMode, setPaymentMode] = useState("Cash On Delivery");
+  const addItemInCart = localStorage.getItem("addItemInCart");
   const [mainPrice, setMainPrice] = useState();
   const canonicalUrl = window.location.href;
-  const [prepaidCouponCode, setPrepaidCouponCode] = useState({});
   const [totalDiscount, setTotalDiscount] = useState(0);
   const [userData, setUserData] = useState({
     username: "",
@@ -28,67 +21,17 @@ function CheckOut() {
     state: "",
     country: "",
   });
-  const [showModal, setShowModal] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const openModal = () => {
-    setShowModal(true);
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const handlePaymentModeChange = (e) => {
-    const selectedMode = e.target.value;
-    setPaymentMode(selectedMode);
-
-    if (selectedMode === "ONLINE") {
-      setPrepaidCouponCode({ discount: 0 });
-    } else if (selectedMode === "Cash On Delivery") {
-      setPrepaidCouponCode({ discount: 0 });
-      setMainPrice(totalPrice);
-      removePromoCode("GOMZI5", "COD");
-    }
-  };
-
-  const UpdatedData = (productData) => {
-    const data = JSON.parse(productData);
-    setMainPrice(data.totalAmount);
-    setProductDatas(data.products);
-    setTotalPrice(data.totalAmount);
-  };
-
   useEffect(() => {
-    if (productData) {
+    if (addItemInCart) {
       getUserData();
-      UpdatedData(productData);
+      getCheckOutAmount();
     }
-  }, [productData]);
-
-  useEffect(() => {
-    const isLogin = localStorage.getItem('fg_group_user_authorization')
-    if(!isLogin){
-      return openModal()
-    }
-  }, []);
-
-  const toggleCollapse = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const compareUserData = (updatedUserData) => {
-    return (
-      updatedUserData.pin_code === userData.pin_code &&
-      updatedUserData.address_line_1 === userData.address_line_1 &&
-      updatedUserData.address_line_2 === userData.address_line_2 &&
-      updatedUserData.city === userData.city &&
-      updatedUserData.email === userData.email
-    );
-  };
+  }, [addItemInCart]);
 
   const handleFormSubmit = async (e) => {
-    setLoading(true)
+    setLoading(true);
     e.preventDefault();
     try {
       const updatedUserData = {
@@ -102,88 +45,63 @@ function CheckOut() {
         first_name: e.target.first_name.value,
         last_name: e.target.last_name.value,
       };
-      const payment_mode = paymentMode;
-      if (!userData.username) {
-        await updateUserData(updatedUserData);
-      } else if (!compareUserData(updatedUserData)) {
-        await updateUserData(updatedUserData);
-      }
-      try {
-        const coupon_ids = [prepaidCouponCode._id].filter(Boolean);
-        // await createPaymentProduct(
-        //   item_id
-        //     ? [{ product_id: "670a5a7b9a7dbcdce616398d", quantity: 1 }]
-        //     : productDatas,
-        //   updatedUserData,
-        //   coupon_ids,
-        //   payment_mode
-        // );
-      } catch (error) {
-        console.error("Error during order:", error);
-      }
-      window.Razorpay && window.Razorpay.close && window.Razorpay.close();
-      window.scrollTo(0, 0);
+
+      localStorage.setItem("userData", JSON.stringify(updatedUserData));
+
+      // send email on: e.target.email.value
+      const form = e.target;
+
+      await emailjs.sendForm(
+        "YOUR_SERVICE_ID",
+        "YOUR_TEMPLATE_ID",
+        form,
+        "YOUR_PUBLIC_KEY"
+      );
+
+      Swal.fire({
+        icon: "success",
+        title: "Email Sent!",
+        text: "Your order details have been sent.",
+      });
+
+      localStorage.removeItem("checkOutAmount");
+      localStorage.removeItem("addItemInCart");
     } catch (error) {
       console.error("Error in handleFormSubmit:", error);
     }
-    setLoading(false)
-  };
-
-  const updateUserData = async (data) => {
-    try {
-      // await axiosInstance.post("/account/update-profile", data);
-      getUserData();
-    } catch (error) {
-      console.error("Error in updateUserData:", error);
-    }
-  };
-
-  const removePromoCode = (code, action) => {
-    if (action === "COD") {
-      calculateDiscountedPrice({ discount: 0 }, "COD");
-    } else {
-      calculateDiscountedPrice({ discount: 0 }, "remove");
-    }
-    if (code !== "GOMZI5") {
-      window.location.reload();
-    }
-  };
-
-  const calculateDiscountedPrice = (couponData, action) => {
-    let discountAmount = 0;
-    let prepaidDiscount;
-    if (action === "COD") {
-      prepaidDiscount = 0;
-    } else {
-      prepaidDiscount = prepaidCouponCode.discount || 0;
-    }
-
-    const latestDiscount = couponData.discount || 0;
-    const totalDiscount = prepaidDiscount + latestDiscount;
-    discountAmount += (totalPrice * totalDiscount) / 100;
-
-    const discountedPrice = totalPrice - discountAmount;
-    setMainPrice(discountedPrice > 0 ? discountedPrice : totalPrice);
-    setTotalDiscount(totalDiscount);
+    setLoading(false);
   };
 
   const getUserData = async () => {
     try {
-      // const response = await axiosInstance.get("/account/profile");
-      // const userData = response.data.data;
-      // if (userData) {
-      //   setUserData({
-      //     pin_code: userData.user?.address?.pin_code || "",
-      //     address_line_1: userData.user?.address?.address_line_1 || "",
-      //     address_line_2: userData.user?.address?.address_line_2 || "",
-      //     city: userData.user?.address?.city || "",
-      //     email: userData.user?.email || "",
-      //     first_name: userData.user?.first_name || "",
-      //     last_name: userData.user?.last_name || "",
-      //     state: userData.user?.address?.state || "",
-      //     country: userData.user?.address?.country || "",
-      //   });
-      // }
+      let userData = localStorage.getItem("userData");
+      userData = JSON.parse(userData);
+      if (userData) {
+        console.log("aaaaa", userData);
+        setUserData({
+          pin_code: userData?.pin_code || "",
+          address_line_1: userData?.address_line_1 || "",
+          address_line_2: userData?.address_line_2 || "",
+          city: userData?.city || "",
+          email: userData?.email || "",
+          first_name: userData?.first_name || "",
+          last_name: userData?.last_name || "",
+          state: userData?.state || "",
+          country: userData?.country || "",
+        });
+      }
+    } catch (error) {
+      console.error("Error in getUserData:", error);
+    }
+  };
+
+  const getCheckOutAmount = async () => {
+    try {
+      let checkOutAmount = localStorage.getItem("checkOutAmount");
+      checkOutAmount = JSON.parse(checkOutAmount);
+      if (checkOutAmount) {
+        setMainPrice(checkOutAmount);
+      }
     } catch (error) {
       console.error("Error in getUserData:", error);
     }
@@ -192,9 +110,7 @@ function CheckOut() {
   return (
     <>
       <Helmet>
-        <title>
-          Checkout at Pure Go - Secure & Fast Payment Options
-        </title>
+        <title>Checkout at Pure Go - Secure & Fast Payment Options</title>
         <meta
           name="description"
           content="Complete your purchase at Pure Go with secure and fast checkout options. Hassle-free payment process for all your nutrition and supplement needs."
@@ -386,15 +302,17 @@ function CheckOut() {
                     )}
                     <li>
                       Delivery Charges{" "}
-                      <span>₹{mainPrice <= 499 ? 85 : "FREE"}</span>
+                      {/* <span>₹{mainPrice <= 499 ? 85 : "FREE"}</span> */}
+                      <span>₹FREE</span>
                     </li>
                     <li className="text-dark">
                       Amount Payable{" "}
                       <span>
                         ₹
-                        {mainPrice <= 499
+                        {/* {mainPrice <= 499
                           ? mainPrice + 85
-                          : Math.round(mainPrice)}
+                          : Math.round(mainPrice).toFixed(2)} */}
+                        {Math.round(mainPrice).toFixed(2)}
                       </span>
                     </li>
                   </ul>
@@ -417,7 +335,7 @@ function CheckOut() {
                                 className="checkbox-input"
                                 name="paymentMode"
                                 value="Cash On Delivery"
-                                onChange={handlePaymentModeChange}
+                                defaultChecked={true}
                               />
                               <span className="checkbox-tile">
                                 <span className="checkbox-icon">
@@ -432,31 +350,6 @@ function CheckOut() {
                                   />
                                 </span>
                                 <span className="checkbox-label">COD</span>
-                              </span>
-                            </label>
-                            <label className="checkbox-wrapper mx-2">
-                              <input
-                                type="radio"
-                                checked
-                                className="checkbox-input"
-                                name="paymentMode"
-                                value="ONLINE"
-                                onChange={handlePaymentModeChange}
-                              />
-                              <span className="checkbox-tile">
-                                <span className="checkbox-icon">
-                                  <img
-                                    src={
-                                      process.env.PUBLIC_URL +
-                                      "/assets/images/cashless-payment.webp"
-                                    }
-                                    className="border-radius-20"
-                                    width="32px"
-                                    alt="fggroup"
-                                  />
-                                </span>
-                                <span className="checkbox-label">Online</span>
-                                <p className="offer-label">Free Consultation</p>
                               </span>
                             </label>
                           </div>
@@ -479,10 +372,9 @@ function CheckOut() {
                       }}
                       className="cart-btn w-100 m-0"
                     >
-                      SAVE &amp; PAY
+                      Order Now
                     </button>
                   </div>
-                  {/* <button className="btn btn-sm">Place order</button> */}
                 </div>
               </div>
             </div>
