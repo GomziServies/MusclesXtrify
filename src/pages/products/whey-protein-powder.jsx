@@ -155,7 +155,7 @@ function PureGoWheyProtein() {
       if (!isLogin) {
         return openModal();
       }
-      let response
+      let response;
       //  = await axiosInstance.post("/order-cart/add-item", {
       //   item_id: product_id,
       //   quantity: 1,
@@ -253,7 +253,14 @@ function PureGoWheyProtein() {
                     <h5 className="stock-status">- In Stock</h5>
                   </div>
                   <p>
-                  MusclesXtrify Whey Protein Chocolate 1kg delivers high-quality protein to fuel muscle growth, enhance recovery, and boost strength. With a rich chocolate flavor, it's perfect for athletes and fitness enthusiasts looking to optimize performance. Packed with essential amino acids, it supports lean muscle development and faster post-workout recovery. This protein blend helps you achieve your fitness goals with great taste and superior nutrition.
+                    MusclesXtrify Whey Protein Chocolate 1kg delivers
+                    high-quality protein to fuel muscle growth, enhance
+                    recovery, and boost strength. With a rich chocolate flavor,
+                    it's perfect for athletes and fitness enthusiasts looking to
+                    optimize performance. Packed with essential amino acids, it
+                    supports lean muscle development and faster post-workout
+                    recovery. This protein blend helps you achieve your fitness
+                    goals with great taste and superior nutrition.
                   </p>
                   <div>
                     <SelectableList
@@ -306,25 +313,53 @@ function PureGoWheyProtein() {
                       aria-labelledby="description-tab"
                     >
                       <div className="product-desc-content">
-                        <h4 className="title">The true strength of MusclesXtrify :</h4>
+                        <h4 className="title">
+                          The true strength of MusclesXtrify :
+                        </h4>
                         <p>
-                        MusclesXtrify Nutrition Whey Protein is a Mixture of Whey Isolate, Whey Concentrate, Skimmed Milk powder, Soy protein isolate and plant protein. It is packed with 24g of 100% High Quality whey protein per serving (30g scoop). The benchmark and premium source of protein powders. Each serving delivers an excellent course of naturally occurring essential amino acids and Branch Chain Amino Acids (BCAA's). The protein found in Performance Whey Blend help support the growth and maintenance of lean muscle mass, ideal for everyone.
+                          MusclesXtrify Nutrition Whey Protein is a Mixture of
+                          Whey Isolate, Whey Concentrate, Skimmed Milk powder,
+                          Soy protein isolate and plant protein. It is packed
+                          with 24g of 100% High Quality whey protein per serving
+                          (30g scoop). The benchmark and premium source of
+                          protein powders. Each serving delivers an excellent
+                          course of naturally occurring essential amino acids
+                          and Branch Chain Amino Acids (BCAA's). The protein
+                          found in Performance Whey Blend help support the
+                          growth and maintenance of lean muscle mass, ideal for
+                          everyone.
                         </p>
                         <h4 className="title">
-                        BETTER INGREDIENTS = BETTER RESULTS
+                          BETTER INGREDIENTS = BETTER RESULTS
                         </h4>
-                        <h4 className="title">
-                        MusclesXtrify the basics :
-                        </h4>
+                        <h4 className="title">MusclesXtrify the basics :</h4>
                         <ul>
-                          <li>NO COLORS: MusclesXtrify Nutrition Whey Protein does not contain any COLOR or PRESERVATIVES.</li>
-                          <li>NO ADDED SUGAR: MusclesXtrify Nutrition Whey Protein does not Contain any Added SUGAR.</li>
-                          <li>CONTAINS SUCRALOSE: It also contains SUCRALOSE as a sweetening agent and may taste bitter due to its natural properties.</li>
-                          <li>TRUSTIFIED CERTIFIED: Blind Testing for Protein & Macro Accuracy, Tested for Amino Spiking & Heavy Metals.</li>
+                          <li>
+                            NO COLORS: MusclesXtrify Nutrition Whey Protein does
+                            not contain any COLOR or PRESERVATIVES.
+                          </li>
+                          <li>
+                            NO ADDED SUGAR: MusclesXtrify Nutrition Whey Protein
+                            does not Contain any Added SUGAR.
+                          </li>
+                          <li>
+                            CONTAINS SUCRALOSE: It also contains SUCRALOSE as a
+                            sweetening agent and may taste bitter due to its
+                            natural properties.
+                          </li>
+                          <li>
+                            TRUSTIFIED CERTIFIED: Blind Testing for Protein &
+                            Macro Accuracy, Tested for Amino Spiking & Heavy
+                            Metals.
+                          </li>
                         </ul>
                         <h4 className="title">DIRECTIONS :</h4>
                         <p>
-                        Add one rounded scoop (30 gm) of Whey Protein to 180 - 200 ml of your favorite liquid such as water, skim milk or almond milk. Stir with a spoon or shake in a shaker for 20-25 seconds until protein powder fully dissolves.
+                          Add one rounded scoop (30 gm) of Whey Protein to 180 -
+                          200 ml of your favorite liquid such as water, skim
+                          milk or almond milk. Stir with a spoon or shake in a
+                          shaker for 20-25 seconds until protein powder fully
+                          dissolves.
                         </p>
                       </div>
                     </div>
@@ -339,15 +374,15 @@ function PureGoWheyProtein() {
                           <tbody>
                             <tr>
                               <th scope="row">Energy (kcal)</th>
-                              <td>132.38</td>
+                              <td>153.38</td>
                             </tr>
                             <tr>
                               <th scope="row">Total Protein (g)</th>
-                              <td>24.00</td>
+                              <td>25.00</td>
                             </tr>
                             <tr>
                               <th scope="row">Carbohydrates (g)</th>
-                              <td>4.90</td>
+                              <td>3.69</td>
                             </tr>
                             <tr>
                               <th scope="row">Added Sugar (g)</th>
@@ -355,7 +390,7 @@ function PureGoWheyProtein() {
                             </tr>
                             <tr>
                               <th scope="row">Dietary Fibre (g)</th>
-                              <td>2.07</td>
+                              <td>1.07</td>
                             </tr>
                             <tr>
                               <th scope="row">Total Fat (g)</th>
@@ -367,11 +402,11 @@ function PureGoWheyProtein() {
                             </tr>
                             <tr>
                               <th scope="row">Potassium (mg)</th>
-                              <td>184.3</td>
+                              <td>95.0</td>
                             </tr>
                             <tr>
                               <th scope="row">Sodium (mg)</th>
-                              <td>158.0</td>
+                              <td>98.0</td>
                             </tr>
                           </tbody>
                         </table>
@@ -410,7 +445,7 @@ function PureGoWheyProtein() {
                       <div className="product-desc-content">
                         <table className="table table-sm">
                           <tbody>
-                          <tr>
+                            <tr>
                               <th scope="row">Energy (kcal)</th>
                               <td>132.38</td>
                             </tr>

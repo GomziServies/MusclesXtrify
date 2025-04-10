@@ -156,11 +156,6 @@ function Home() {
           content="https://purego.gomzilifesciences.in/"
         />
         <link rel="canonical" href={{ canonicalUrl }} />
-        <link
-          rel="preload"
-          href={`${process.env.PUBLIC_URL}/assets/process.env.PUBLIC_URL +  "/assets/images/nutrition/nutrition-banner-inner-14.webp`}
-          as="image"
-        />
       </Helmet>
       <NutritionHeader />
       <button className="scroll-top scroll-to-target" data-target="html">

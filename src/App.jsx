@@ -12,6 +12,7 @@ import ScrollRestoration from "./components/scroll-restoration";
 import PureGoPreWorkout from "./pages/products/pre-workout-supplements";
 import AboutUs from "./pages/nutrition/about-us";
 import ContactUs from "./pages/nutrition/contact-us";
+import Supplements from "./pages/nutrition/supplements";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/creatine-supplements" element={<PureGoCreatine />} />
         <Route path="/whey-protein-powder" element={<PureGoWheyProtein />} />
         <Route path="/pre-workout" element={<PureGoPreWorkout />} />
+        <Route path="/supplements" element={<Supplements />} />
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/404" element={<NotFoundPage />} />

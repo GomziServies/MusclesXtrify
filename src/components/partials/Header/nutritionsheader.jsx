@@ -43,7 +43,7 @@ function NutritionHeader() {
               </Link>
             </li>
             <li>
-              <Link to="/about-us">
+              <Link to="/supplements">
                 <p className="m-0">Products</p>
               </Link>
             </li>
