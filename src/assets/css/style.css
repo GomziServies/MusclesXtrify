@@ -2666,7 +2666,6 @@ body.search-visible {
 }
 
 .inner-shop-details-price .stock-status {
-  color: #86c33a;
   color: var(--tg-secondary-color);
   font-size: 18px;
   font-weight: 900;
@@ -6153,7 +6152,6 @@ body.search-visible {
 }
 
 .tg-shop-thumb img {
-  min-height: 391px;
   object-fit: cover;
 }
 
@@ -6204,9 +6202,9 @@ body.search-visible {
 .tg-shop-price {
   display: block;
   line-height: 1;
-  font-weight: 700;
+  font-weight: 900 !important;
   font-size: 18px;
-  color: #e51d28;
+  color: var(--tg-secondary-color);
 }
 
 .tg-shop-price del {
@@ -9008,7 +9006,6 @@ body.search-visible {
   pointer-events: none;
 }
 
-
 .closess {
   position: relative;
 }
@@ -9103,7 +9100,6 @@ body.search-visible {
   overflow-y: auto;
   height: 738px;
 }
-
 
 .checkbox-wrapper-16 *,
 .checkbox-wrapper-16 *:after,

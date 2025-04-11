@@ -184,7 +184,7 @@ function Home() {
                     Increased Energy!
                   </h4>
                   <h2 className="title wow fadeInUp" data-wow-delay=".4s">
-                    Muscles X Trify - Nutrition <br /> That Powers Champions
+                    MusclesXTrify - Nutrition <br /> That Powers Champions
                   </h2>
                   <p className=" wow fadeInUp" data-wow-delay=".6s">
                     MusclesXtrify - Premium protein supplements for muscle
@@ -391,7 +391,7 @@ function Home() {
             </div>
             <div className="tg-shop-wrapper">
               <div className="row justify-content-center">
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-4 col-12">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
                       <a href="whey-protein-powder?flavor=Chocolate&size=1kg">
@@ -407,14 +407,18 @@ function Home() {
                     <div className="tg-shop-content">
                       <h4 className="title">
                         <a href="whey-protein-powder?flavor=Chocolate&size=1kg">
-                          Whey Protein Chocolate-1kg
+                          Premium whey Protein
                         </a>
                       </h4>
-                      <div className="tg-shop-price">₹ 2,275/-</div>
+                      <div className="tg-shop-price inner-shop-details-price justify-content-center d-flex">
+                        <b>₹ 2,275/-</b>
+                        <span class="old-prices">₹3500/-</span>
+                        <h5 class="stock-status ml-3 mb-0">35%</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6">
+                {/* <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
                       <a href="whey-protein-powder?flavor=Mocha Coffee&size=1kg">
@@ -482,8 +486,8 @@ function Home() {
                       <div className="tg-shop-price">₹ 4,200/-</div>
                     </div>
                   </div>
-                </div>
-                <div className="col-lg-6 col-md-6">
+                </div> */}
+                <div className="col-lg-4 col-12">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
                       <a href="creatine-supplements">
@@ -500,11 +504,15 @@ function Home() {
                       <h4 className="title">
                         <a href="creatine-supplements">Creatine Monohydrate</a>
                       </h4>
-                      <div className="tg-shop-price">₹ 810/-</div>
+                      <div className="tg-shop-price inner-shop-details-price justify-content-center d-flex">
+                        <b>₹ 810/-</b>
+                        <span class="old-prices">₹1800/-</span>
+                        <h5 class="stock-status ml-3 mb-0">55%</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6">
+                <div className="col-lg-4 col-12">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
                       <a href="pre-workout">
@@ -521,7 +529,11 @@ function Home() {
                       <h4 className="title">
                         <a href="pre-workout">MusclesXtrify Pre Workout</a>
                       </h4>
-                      <div className="tg-shop-price">₹ 1,125/-</div>
+                      <div className="tg-shop-price inner-shop-details-price justify-content-center d-flex">
+                        <b>₹ 1,125/-</b>
+                        <span class="old-prices">₹2500/-</span>
+                        <h5 class="stock-status ml-3 mb-0">55%</h5>
+                      </div>
                     </div>
                   </div>
                 </div>
