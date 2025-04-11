@@ -41,7 +41,7 @@ function HomeNutritionFooter() {
                         <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="/supplement">Product</a>
+                        <a href="/supplements">Product</a>
                       </li>
                       <li>
                         <a href="/about-us">About Us</a>
