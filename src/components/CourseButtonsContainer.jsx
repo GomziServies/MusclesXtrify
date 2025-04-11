@@ -29,9 +29,9 @@ const CourseButtonsContainer = ({
 
   return (
     <div className="col-12 p-0">
-      <div className="m-0 w-100 py-4 px-0 px-md-3">
-        <div className="common-button mx-2">
-          <div className="inner-shop-perched-info mt-3">
+      <div className="m-0 w-100 py-2 pt-3 px-0">
+        <div className="common-button">
+          <div className="inner-shop-perched-info">
             <button onClick={(e) => toggleMenu(currentProductData, e)} className="cart-btn">
               add to cart
             </button>

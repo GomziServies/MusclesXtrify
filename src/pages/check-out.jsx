@@ -3,7 +3,7 @@ import Swal from "sweetalert2";
 import { Helmet } from "react-helmet";
 import NutritionHeader from "../components/partials/Header/nutritionsheader";
 import LoadingComponent from "../components/loadingComponent";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 
 function CheckOut() {
   const [paymentMode, setPaymentMode] = useState("Cash On Delivery");
@@ -19,6 +19,7 @@ function CheckOut() {
     address_line_2: "",
     city: "",
     state: "",
+    mobile: "",
     country: "",
   });
   const [loading, setLoading] = useState(false);
@@ -27,6 +28,14 @@ function CheckOut() {
     if (addItemInCart) {
       getUserData();
       getCheckOutAmount();
+    } else {
+      Swal.fire({
+        icon: "warning",
+        title: "No Items Selected",
+        text: "Please select at least one item before proceeding.",
+      }).then(() => {
+        window.location.href = "/supplements";
+      });
     }
   }, [addItemInCart]);
 
@@ -41,48 +50,97 @@ function CheckOut() {
         city: e.target.city.value,
         state: e.target.state.value,
         country: e.target.country.value,
+        mobile: e.target.mobile.value,
         email: e.target.email.value,
         first_name: e.target.first_name.value,
         last_name: e.target.last_name.value,
       };
 
       localStorage.setItem("userData", JSON.stringify(updatedUserData));
+      const productData = JSON.parse(addItemInCart);
 
-      // send email on: e.target.email.value
+      const ProductTableHTML = productData.products
+        .map((product) => {
+          return `<tr>
+						<td colspan="3" class="table-css" style="padding: 10px; border: 1px solid #424242; font-size: 12px;">
+							${product.name}
+						</td>
+						<td colspan="2" class="table-css" style="padding: 10px; border: 1px solid #424242; font-size: 12px; text-align: center">
+							${product.price}
+						</td>
+          </tr>`;
+        })
+        .join("");
+
       const form = e.target;
 
+      const deliveryAddress = `${form.officeName.value}, ${form.roadName.value}, ${form.city.value}, ${form.state.value}, ${form.country.value} - ${form.postalCode.value}`;
+      const pinCode = form.postalCode.value;
+      const total = Math.round(mainPrice);
+
+      // Set values in hidden fields
+      document.getElementById("deliveryAddressInput").value = deliveryAddress;
+      document.getElementById("cityPinCodeInput").value = pinCode;
+      document.getElementById("totalAmountInput").value = total;
+      document.getElementById("productsTableInput").value = ProductTableHTML;
+
       await emailjs.sendForm(
-        "YOUR_SERVICE_ID",
-        "YOUR_TEMPLATE_ID",
+        "service_aeq63hi",
+        "template_n575s5o",
         form,
-        "YOUR_PUBLIC_KEY"
+        "7-nkCpIfPi2D32YT1"
+      );
+      await emailjs.sendForm(
+        "service_aeq63hi",
+        "template_bwz43rn",
+        form,
+        "7-nkCpIfPi2D32YT1"
       );
 
       Swal.fire({
         icon: "success",
         title: "Email Sent!",
         text: "Your order details have been sent.",
+      }).then(() => {
+        localStorage.removeItem("checkOutAmount");
+        localStorage.removeItem("addItemInCart");
+        window.location.href = "/";
       });
-
-      localStorage.removeItem("checkOutAmount");
-      localStorage.removeItem("addItemInCart");
     } catch (error) {
       console.error("Error in handleFormSubmit:", error);
     }
     setLoading(false);
   };
 
+  // const formData = e.target;
+  // const emailFormData = {
+  //   first_name: formData.first_name.value,
+  //   last_name: formData.last_name.value,
+  //   email: formData.email.value,
+  //   delivery_address: `${formData.officeName.value}, ${formData.roadName.value}, ${formData.city.value}, ${formData.state.value}, ${formData.country.value} - ${formData.postalCode.value}`,
+  //   city_pin_code: formData.postalCode.value,
+  //   totalAmount: Math.round(mainPrice),
+  //   products_table: ProductTableHTML,
+  // };
+
+  // await emailjs.sendForm(
+  //   "service_aeq63hi",
+  //   "template_n575s5o",
+  //   emailFormData,
+  //   "7-nkCpIfPi2D32YT1"
+  // );
+
   const getUserData = async () => {
     try {
       let userData = localStorage.getItem("userData");
       userData = JSON.parse(userData);
       if (userData) {
-        console.log("aaaaa", userData);
         setUserData({
           pin_code: userData?.pin_code || "",
           address_line_1: userData?.address_line_1 || "",
           address_line_2: userData?.address_line_2 || "",
           city: userData?.city || "",
+          mobile: userData?.mobile || "",
           email: userData?.email || "",
           first_name: userData?.first_name || "",
           last_name: userData?.last_name || "",
@@ -176,17 +234,32 @@ function CheckOut() {
                         />
                       </div>
                     </div>
-                  </div>
-                  <div className="form-grp">
-                    <label htmlFor="email">Email address *</label>
-                    <input
-                      type="email"
-                      id="email"
-                      placeholder="Enter Email"
-                      name="email"
-                      required
-                      defaultValue={userData.email}
-                    />
+                    <div className="col-md-6">
+                      <div className="form-grp">
+                        <label htmlFor="email">Email address *</label>
+                        <input
+                          type="email"
+                          id="email"
+                          placeholder="Enter Email"
+                          name="email"
+                          required
+                          defaultValue={userData.email}
+                        />
+                      </div>
+                    </div>
+                    <div className="col-md-6">
+                      <div className="form-grp">
+                        <label htmlFor="mobile">Mobile *</label>
+                        <input
+                          type="text"
+                          id="mobile"
+                          placeholder="Enter Mobile"
+                          name="mobile"
+                          required
+                          defaultValue={userData.mobile}
+                        />
+                      </div>
+                    </div>
                   </div>
                   <div className="row">
                     <div className="col-md-6">
@@ -274,6 +347,26 @@ function CheckOut() {
                         />
                       </div>
                     </div>
+                    <input
+                      type="hidden"
+                      name="delivery_address"
+                      id="deliveryAddressInput"
+                    />
+                    <input
+                      type="hidden"
+                      name="city_pin_code"
+                      id="cityPinCodeInput"
+                    />
+                    <input
+                      type="hidden"
+                      name="totalAmount"
+                      id="totalAmountInput"
+                    />
+                    <textarea
+                      id="productsTableInput"
+                      name="productsTable"
+                      style={{ display: "none" }}
+                    ></textarea>
                   </div>
                 </form>
               </div>

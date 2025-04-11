@@ -53,10 +53,10 @@ function PureGoPreWorkout() {
       data: {
         img: "/assets/images/pre-workout/pre-workout-1.jpg",
         name: "EAA Powder",
-        price: "2099",
-        // discount: "490",
+        price: "1125",
+        old_price: "2500",
         size: "250 g",
-        dis_point: "15%",
+        discount: "55%",
       },
     },
   ];
@@ -200,12 +200,14 @@ function PureGoPreWorkout() {
                   </div>
                   <div className="inner-shop-details-price">
                     <h2 className="price d-flex">
-                      {/* ₹{currentProductData.discount}/- */}
+                      ₹{currentProductData.price}/-
                       <span className="old-prices">
-                        ₹{currentProductData.price}/-
+                        ₹{currentProductData.old_price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">- In Stock</h5>
+                    <h5 className="stock-status">
+                      {currentProductData.discount}
+                    </h5>
                   </div>
                   <p>
                     MusclesXtrify Pre Workout is designed to fuel your body with

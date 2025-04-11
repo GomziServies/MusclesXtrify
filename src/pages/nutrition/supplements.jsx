@@ -79,7 +79,7 @@ function Supplements() {
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-powder">
+                      <a href="whey-protein-powder?flavor=Chocolate&size=1kg">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -91,18 +91,18 @@ function Supplements() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-powder">
+                        <a href="whey-protein-powder?flavor=Chocolate&size=1kg">
                           Whey Protein Chocolate-1kg
                         </a>
                       </h4>
-                      <div className="tg-shop-price">₹ 3,500/-</div>
+                      <div className="tg-shop-price">₹ 2,275/-</div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-powder">
+                      <a href="whey-protein-powder?flavor=Mocha Coffee&size=1kg">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -114,18 +114,18 @@ function Supplements() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-powder">
+                        <a href="whey-protein-powder?flavor=Mocha Coffee&size=1kg">
                           Whey Protein Mocha Coffee-1kg
                         </a>
                       </h4>
-                      <div className="tg-shop-price">₹ 3,500/-</div>
+                      <div className="tg-shop-price">₹ 2,275/-</div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-powder">
+                      <a href="whey-protein-powder?flavor=Chocolate&size=2kg">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -137,18 +137,18 @@ function Supplements() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-powder">
+                        <a href="whey-protein-powder?flavor=Chocolate&size=2kg">
                           Whey Protein Chocolate-2kg
                         </a>
                       </h4>
-                      <div className="tg-shop-price">₹ 7,000/-</div>
+                      <div className="tg-shop-price">₹ 4,200/-</div>
                     </div>
                   </div>
                 </div>
                 <div className="col-lg-6 col-md-6">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
-                      <a href="whey-protein-powder">
+                      <a href="whey-protein-powder?flavor=Mocha Coffee&size=2kg">
                         <img
                           src={
                             process.env.PUBLIC_URL +
@@ -160,11 +160,11 @@ function Supplements() {
                     </div>
                     <div className="tg-shop-content">
                       <h4 className="title">
-                        <a href="whey-protein-powder">
+                        <a href="whey-protein-powder?flavor=Mocha Coffee&size=2kg">
                           Whey Protein Mocha Coffee-2kg
                         </a>
                       </h4>
-                      <div className="tg-shop-price">₹ 7,000/-</div>
+                      <div className="tg-shop-price">₹ 4,200/-</div>
                     </div>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ function Supplements() {
                       <h4 className="title">
                         <a href="creatine-supplements">Creatine Monohydrate</a>
                       </h4>
-                      <div className="tg-shop-price">₹ 1,800/-</div>
+                      <div className="tg-shop-price">₹ 810/-</div>
                     </div>
                   </div>
                 </div>
@@ -206,7 +206,7 @@ function Supplements() {
                       <h4 className="title">
                         <a href="pre-workout">MusclesXtrify Pre Workout</a>
                       </h4>
-                      <div className="tg-shop-price">₹ 2,500/-</div>
+                      <div className="tg-shop-price">₹ 1,125/-</div>
                     </div>
                   </div>
                 </div>

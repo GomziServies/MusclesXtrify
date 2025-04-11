@@ -24,6 +24,7 @@ function PureGoWheyProtein() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const ProductFlavor = searchParams.get("flavor");
+  const ProductSize = searchParams.get("size");
   const canonicalUrl = window.location.href;
   const [currentProduct, setCurrentProduct] = useState("1kg-Chocolate");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
@@ -75,10 +76,10 @@ function PureGoWheyProtein() {
       data: {
         img: "/assets/images/protein-chocolate-1kg/protein-chocolate-1kg-1.jpg",
         name: "Whey Protein 1kg Chocolate",
-        price: "3500",
-        // discount: "1250",
+        price: "2275",
+        old_price: "3500",
         size: "1 Kg",
-        dis_point: "15%",
+        discount: "35%",
       },
     },
     {
@@ -86,10 +87,10 @@ function PureGoWheyProtein() {
       data: {
         img: "/assets/images/protein-mochacoffee-1kg/protein-mochacoffee-1kg-1.jpg",
         name: "Whey Protein 1kg Mocha Coffee",
-        price: "3500",
-        // discount: "1250",
+        price: "2275",
+        old_price: "3500",
         size: "1 Kg",
-        dis_point: "15%",
+        discount: "35%",
       },
     },
     {
@@ -97,10 +98,10 @@ function PureGoWheyProtein() {
       data: {
         img: "/assets/images/protein-chocolate-2kg/protein-chocolate-2kg-1.jpg",
         name: "Whey Protein 2kg Chocolate",
-        price: "7000",
-        // discount: "1250",
+        price: "4200",
+        old_price: "7000",
         size: "2 Kg",
-        dis_point: "15%",
+        discount: "40%",
       },
     },
     {
@@ -108,10 +109,10 @@ function PureGoWheyProtein() {
       data: {
         img: "/assets/images/protein-mochacoffee-2kg/protein-mochacoffee-2kg-1.jpg",
         name: "Whey Protein 2kg Mocha Coffee",
-        price: "7000",
-        // discount: "1250",
+        price: "4200",
+        old_price: "7000",
         size: "2 Kg",
-        dis_point: "15%",
+        discount: "40%",
       },
     },
   ];
@@ -170,9 +171,10 @@ function PureGoWheyProtein() {
   };
 
   useEffect(() => {
-    if (ProductFlavor) {
+    if (ProductFlavor && ProductSize) {
       setActiveFlavor(ProductFlavor);
-      setCurrentProduct(`${activeSize}-${ProductFlavor}`);
+      setActiveSize(ProductSize);
+      setCurrentProduct(`${ProductSize}-${ProductFlavor}`);
     }
   }, []);
 
@@ -245,12 +247,12 @@ function PureGoWheyProtein() {
                   </div>
                   <div className="inner-shop-details-price">
                     <h2 className="price d-flex">
-                      {/* ₹{currentProductData.discount}/- */}
+                      ₹{currentProductData.price}/-
                       <span className="old-prices">
-                        ₹{currentProductData.price}/-
+                        ₹{currentProductData.old_price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">- In Stock</h5>
+                    <h5 className="stock-status">{currentProductData.discount}</h5>
                   </div>
                   <p>
                     MusclesXtrify Whey Protein Chocolate 1kg delivers

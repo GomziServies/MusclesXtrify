@@ -54,10 +54,10 @@ function PureGoCreatine() {
       data: {
         img: "/assets/images/creatine/creatine-1.jpg",
         name: "Creatine Monohydrate",
-        price: "1800",
-        // discount: "350",
+        price: "810",
+        old_price: "1800",
         size: "250g",
-        dis_point: "15%",
+        discount: "55%",
       },
     },
   ];
@@ -191,12 +191,12 @@ function PureGoCreatine() {
                   </div>
                   <div className="inner-shop-details-price">
                     <h2 className="price d-flex">
-                      {/* ₹{currentProductData.discount}/- */}
+                      ₹{currentProductData.price}/-
                       <span className="old-prices">
-                        ₹{currentProductData.price}/-
+                        ₹{currentProductData.old_price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">- In Stock</h5>
+                    <h5 className="stock-status">{currentProductData.discount}</h5>
                   </div>
                   <p>
                     MusclesXtrify Creatine Monohydrate is a powerful supplement

@@ -2666,13 +2666,23 @@ body.search-visible {
 }
 
 .inner-shop-details-price .stock-status {
-  font-size: 12px;
+  color: #86c33a;
+  color: var(--tg-secondary-color);
+  font-size: 18px;
+  font-weight: 900;
   line-height: 1;
   margin-bottom: 0;
-  font-weight: 900;
   margin-left: 15px;
   text-transform: uppercase;
-  color: var(--tg-secondary-color);
+}
+
+.old-prices {
+  font-size: 18px;
+  color: #f34b4f;
+  text-decoration: line-through;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .inner-shop-details-list {
