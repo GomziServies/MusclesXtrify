@@ -65,13 +65,12 @@ root.render(
                 <div>
                   <img
                     src={
-                      process.env.PUBLIC_URL +
-                      "../assets/images/nutrition-logo.png"
+                      process.env.PUBLIC_URL + "../assets/images/logo_01.png"
                     }
                     className="img-fluid"
-                    width={120}
+                    width={150}
                     height="auto"
-                    alt="Fg Group"
+                    alt="MuscleXTrify"
                   />
                 </div>
               </div>

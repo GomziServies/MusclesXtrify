@@ -19,7 +19,7 @@ function NutritionHeader() {
               <img
                 src={process.env.PUBLIC_URL + "../assets/images/logo_01.png"}
                 width="100%"
-                alt="Fg Group"
+                alt="MuscleXTrify"
               />
             </div>
           </Link>
@@ -30,7 +30,7 @@ function NutritionHeader() {
               <img
                 src={process.env.PUBLIC_URL + "../assets/images/logo_01.png"}
                 width="100%"
-                alt="Fg Group"
+                alt="MuscleXTrify"
               />
             </div>
           </Link>
@@ -71,7 +71,7 @@ function NutritionHeader() {
               className="lazy"
               src={process.env.PUBLIC_URL + "../assets/images/logo_01.png"}
               width="40%"
-              alt="Fg Group"
+              alt="MuscleXTrify"
             />
           </Link>
           <ul className="mobileUserInfo aa">
