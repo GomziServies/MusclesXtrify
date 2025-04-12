@@ -505,9 +505,9 @@ function Home() {
                         <a href="creatine-supplements">Creatine Monohydrate</a>
                       </h4>
                       <div className="tg-shop-price inner-shop-details-price justify-content-center d-flex">
-                        <b>₹ 810/-</b>
+                        <b>₹ 900/-</b>
                         <span class="old-prices">₹1800/-</span>
-                        <h5 class="stock-status ml-3 mb-0">55%</h5>
+                        <h5 class="stock-status ml-3 mb-0">50%</h5>
                       </div>
                     </div>
                   </div>
