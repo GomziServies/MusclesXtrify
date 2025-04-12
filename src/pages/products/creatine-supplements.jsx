@@ -54,10 +54,10 @@ function PureGoCreatine() {
       data: {
         img: "/assets/images/creatine/creatine-1.jpg",
         name: "Creatine Monohydrate",
-        price: "810",
+        price: "900",
         old_price: "1800",
         size: "250g",
-        discount: "55%",
+        discount: "50%",
       },
     },
   ];

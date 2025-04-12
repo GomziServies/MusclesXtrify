@@ -52,7 +52,7 @@ function PureGoPreWorkout() {
       key: "250g-Watermelon",
       data: {
         img: "/assets/images/pre-workout/pre-workout-1.jpg",
-        name: "EAA Powder",
+        name: "Pre Workout Powder",
         price: "1125",
         old_price: "2500",
         size: "250 g",
@@ -111,14 +111,14 @@ function PureGoPreWorkout() {
   return (
     <>
       <Helmet>
-        <title>Best EAA Supplements for Muscle Recovery & Performance</title>
+        <title>Best Pre Workout Powder for Muscle Recovery & Performance</title>
         <meta
           name="description"
-          content="Boost muscle recovery, endurance, and performance with the best EAA supplements. Shop top-quality essential amino acids now!"
+          content="Boost muscle recovery, endurance, and performance with the best Pre Workout Powder. Shop top-quality essential amino acids now!"
         />
         <meta
           name="keyword"
-          content="eaa, muscle recovery, electrolyte, eaa protein, supplements, eaa supplements, muscular growth, metabolism, protein powder, best collagen supplements, best probiotic for women, best protein powder, probiotics for women, vitamins, mass gainer, fat burner, electrolytes, testosterone supplements, weight loss supplements, best magnesium supplement, berberine supplement, best weight loss supplements, fiber supplement, electrolyte powder, best testosterone booster, BCAA Supplement"
+          content="muscle recovery, electrolyte, eaa protein, supplements, Pre Workout Powder, muscular growth, metabolism, protein powder, best collagen supplements, best probiotic for women, best protein powder, probiotics for women, vitamins, mass gainer, fat burner, electrolytes, testosterone supplements, weight loss supplements, best magnesium supplement, berberine supplement, best weight loss supplements, fiber supplement, electrolyte powder, best testosterone booster, BCAA Supplement"
         />
         <meta
           property="og:url"

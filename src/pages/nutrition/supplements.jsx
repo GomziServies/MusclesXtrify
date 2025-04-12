@@ -75,7 +75,7 @@ function Supplements() {
               </div>
             </div>
             <div className="tg-shop-wrapper">
-            <div className="row justify-content-center">
+              <div className="row justify-content-center">
                 <div className="col-lg-4 col-12">
                   <div className="tg-shop-item text-center">
                     <div className="tg-shop-thumb">
@@ -190,9 +190,9 @@ function Supplements() {
                         <a href="creatine-supplements">Creatine Monohydrate</a>
                       </h4>
                       <div className="tg-shop-price inner-shop-details-price justify-content-center d-flex">
-                        <b>₹ 810/-</b>
+                        <b>₹ 900/-</b>
                         <span class="old-prices">₹1800/-</span>
-                        <h5 class="stock-status ml-3 mb-0">55%</h5>
+                        <h5 class="stock-status ml-3 mb-0">50%</h5>
                       </div>
                     </div>
                   </div>
