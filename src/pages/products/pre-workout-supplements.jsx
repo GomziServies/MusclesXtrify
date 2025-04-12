@@ -334,14 +334,10 @@ function PureGoPreWorkout() {
                         <h4 class="title mt-5">Direction For Use :</h4>
                         <ul class="product-desc-list list-wrap">
                           <li>
-                            Take 5g (scoop for beginners) once a day with 200 -
-                            220 ml chilled water for an adult or as per
-                            Healthcare Expert.
+                            Take 5g (scoop for beginners) once a day with 200 - 220 ml chilled water for an adult or as per Healthcare Expert.
                           </li>
                           <li>
-                            Take 10g (scoop for professionals) once a day with
-                            380 - 400 ml for an adult or as per Healthcare
-                            Expert.
+                            Take 10g (scoop for professionals) once a day with 380 - 400 ml for an adult or as per Healthcare Expert.
                           </li>
                         </ul>
                       </div>
@@ -381,19 +377,35 @@ function PureGoPreWorkout() {
                           <tbody>
                             <tr>
                               <th scope="row">L-CITRULLINE</th>
-                              <td>2.26 gm</td>
+                              <td>2.75 gm</td>
                             </tr>
                             <tr>
                               <th scope="row">L-ARGININE</th>
-                              <td>0.45 gm</td>
+                              <td>1.50 gm</td>
                             </tr>
                             <tr>
                               <th scope="row">L-TAURINE</th>
-                              <td>0.36 gm</td>
+                              <td>0.25 gm</td>
                             </tr>
                             <tr>
                               <th scope="row">B-ALANINE</th>
-                              <td>0.36 gm</td>
+                              <td>3.34 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">L-Tyrosine</th>
+                              <td>0.25 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">L-Theanine</th>
+                              <td>0.10 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Creatine Monohydrate</th>
+                              <td>1.00 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Citric Acid</th>
+                              <td>0.20 gm</td>
                             </tr>
                             <tr>
                               <th scope="row">CAFFEINE ANHYDROUS</th>
@@ -406,6 +418,18 @@ function PureGoPreWorkout() {
                             <tr>
                               <th scope="row">GREEN COFFEE EXTRACT</th>
                               <td>0.10 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Potassium Chloride</th>
+                              <td>0.40 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Maltodextrin</th>
+                              <td>0.50 gm</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Bioperine ( Black Pepper Extract )</th>
+                              <td>0.005 gm</td>
                             </tr>
                           </tbody>
                         </table>
