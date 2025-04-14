@@ -22,10 +22,10 @@ import CourseButtonsContainer from "../../components/CourseButtonsContainer";
 
 function PureGoCreatine() {
   const canonicalUrl = window.location.href;
-  const [currentProduct, setCurrentProduct] = useState("250g-Lemon");
+  const [currentProduct, setCurrentProduct] = useState("250g-Unflavoured");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
-  const [activeFlavor, setActiveFlavor] = useState("Lemon");
+  const [activeFlavor, setActiveFlavor] = useState("Unflavoured");
   const [opacity, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
@@ -40,7 +40,7 @@ function PureGoCreatine() {
   };
 
   const productImages = {
-    "250g-Lemon": [
+    "250g-Unflavoured": [
       "/assets/images/creatine/creatine-1.jpg",
       "/assets/images/creatine/creatine-2.jpg",
       "/assets/images/creatine/creatine-3.jpg",
@@ -50,7 +50,7 @@ function PureGoCreatine() {
 
   const products = [
     {
-      key: "250g-Lemon",
+      key: "250g-Unflavoured",
       data: {
         img: "/assets/images/creatine/creatine-1.jpg",
         name: "Creatine Monohydrate",
@@ -63,7 +63,7 @@ function PureGoCreatine() {
   ];
 
   const sizeOptions = [{ id: "250g", label: "250g" }];
-  const flavorOptions = [{ id: "Lemon", label: "Lemon" }];
+  const flavorOptions = [{ id: "Unflavoured", label: "Unflavoured" }];
 
   const handleSelectSize = (id) => {
     setOpacity(0.3);

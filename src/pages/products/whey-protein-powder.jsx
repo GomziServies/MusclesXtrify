@@ -380,15 +380,15 @@ function PureGoWheyProtein() {
                           <tbody>
                           <tr>
                               <th scope="row">Energy (kcal)</th>
-                              <td>132.38</td>
+                              <td>153.38</td>
                             </tr>
                             <tr>
                               <th scope="row">Total Protein (g)</th>
-                              <td>24.00</td>
+                              <td>25.00</td>
                             </tr>
                             <tr>
                               <th scope="row">Carbohydrates (g)</th>
-                              <td>4.90</td>
+                              <td>3.69</td>
                             </tr>
                             <tr>
                               <th scope="row">Added Sugar (g)</th>
@@ -396,7 +396,7 @@ function PureGoWheyProtein() {
                             </tr>
                             <tr>
                               <th scope="row">Dietary Fibre (g)</th>
-                              <td>2.07</td>
+                              <td>1.07</td>
                             </tr>
                             <tr>
                               <th scope="row">Total Fat (g)</th>
@@ -408,11 +408,11 @@ function PureGoWheyProtein() {
                             </tr>
                             <tr>
                               <th scope="row">Potassium (mg)</th>
-                              <td>184.3</td>
+                              <td>95.0</td>
                             </tr>
                             <tr>
                               <th scope="row">Sodium (mg)</th>
-                              <td>158.0</td>
+                              <td>98.0</td>
                             </tr>
                             <tr>
                               <th scope="row">Glutamine(g)</th>

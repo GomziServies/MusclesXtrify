@@ -21,10 +21,10 @@ import CourseButtonsContainer from "../../components/CourseButtonsContainer";
 
 function PureGoPreWorkout() {
   const canonicalUrl = window.location.href;
-  const [currentProduct, setCurrentProduct] = useState("250g-Watermelon");
+  const [currentProduct, setCurrentProduct] = useState("250g-Cranberry");
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [activeSize, setActiveSize] = useState("250g");
-  const [activeFlavor, setActiveFlavor] = useState("Watermelon");
+  const [activeFlavor, setActiveFlavor] = useState("Cranberry");
   const [opacity, setOpacity] = useState(1);
   const imageRef = useRef(null);
   const [showModal, setShowModal] = useState(false);
@@ -39,7 +39,7 @@ function PureGoPreWorkout() {
   };
 
   const productImages = {
-    "250g-Watermelon": [
+    "250g-Cranberry": [
       "/assets/images/pre-workout/pre-workout-1.jpg",
       "/assets/images/pre-workout/pre-workout-2.jpg",
       "/assets/images/pre-workout/pre-workout-3.jpg",
@@ -49,7 +49,7 @@ function PureGoPreWorkout() {
 
   const products = [
     {
-      key: "250g-Watermelon",
+      key: "250g-Cranberry",
       data: {
         img: "/assets/images/pre-workout/pre-workout-1.jpg",
         name: "Pre Workout Powder",
@@ -63,7 +63,7 @@ function PureGoPreWorkout() {
 
   const sizeOptions = [{ id: "250g", label: "250g" }];
 
-  const flavorOptions = [{ id: "Watermelon", label: "Watermelon" }];
+  const flavorOptions = [{ id: "Cranberry", label: "Cranberry" }];
 
   const handleSelectSize = (id) => {
     setOpacity(0.3);
@@ -334,10 +334,10 @@ function PureGoPreWorkout() {
                         <h4 class="title mt-5">Direction For Use :</h4>
                         <ul class="product-desc-list list-wrap">
                           <li>
-                            Take 5g (scoop for beginners) once a day with 200 - 220 ml chilled water for an adult or as per Healthcare Expert.
+                            Take 6g (scoop for beginners) once a day with 200 - 220 ml chilled water for an adult or as per Healthcare Expert.
                           </li>
                           <li>
-                            Take 10g (scoop for professionals) once a day with 380 - 400 ml for an adult or as per Healthcare Expert.
+                            Take 12g (scoop for professionals) once a day with 300 - 320 ml for an adult or as per Healthcare Expert.
                           </li>
                         </ul>
                       </div>
