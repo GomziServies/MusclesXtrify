@@ -252,7 +252,9 @@ function PureGoWheyProtein() {
                         ₹{currentProductData.old_price}/-
                       </span>
                     </h2>
-                    <h5 className="stock-status">{currentProductData.discount}</h5>
+                    <h5 className="stock-status">
+                      {currentProductData.discount}
+                    </h5>
                   </div>
                   <p>
                     MusclesXtrify Whey Protein Chocolate 1kg delivers
@@ -319,7 +321,17 @@ function PureGoWheyProtein() {
                           The true strength of MusclesXtrify :
                         </h4>
                         <p>
-                          MusclesXtrify Nutrition Whey Protein is a Mixture of Whey Isolate, Whey Concentrate, Skimmed Milk powder, Soy protein isolate and plant protein. It is packed with 24g of 100% High Quality whey protein per serving (30g scoop). The benchmark and premium source of protein powders. Each serving delivers an excellent course of naturally occurring essential amino acids and Branch Chain Amino Acids (BCAA's). The protein found in Performance Whey Blend help support the growth and maintenance of lean muscle mass, ideal for everyone.
+                          MusclesXtrify Nutrition Whey Protein is a Mixture of
+                          Whey Isolate, Whey Concentrate, Skimmed Milk powder,
+                          Soy protein isolate and plant protein. It is packed
+                          with 24g of 100% High Quality whey protein per serving
+                          (30g scoop). The benchmark and premium source of
+                          protein powders. Each serving delivers an excellent
+                          course of naturally occurring essential amino acids
+                          and Branch Chain Amino Acids (BCAA's). The protein
+                          found in Performance Whey Blend help support the
+                          growth and maintenance of lean muscle mass, ideal for
+                          everyone.
                         </p>
                         <h4 className="title">
                           BETTER INGREDIENTS = BETTER RESULTS
@@ -327,21 +339,31 @@ function PureGoWheyProtein() {
                         <h4 className="title">MusclesXtrify the basics :</h4>
                         <ul>
                           <li>
-                            NO COLORS: MusclesXtrify Nutrition Whey Protein does not contain any COLOR or PRESERVATIVES.
+                            NO COLORS: MusclesXtrify Nutrition Whey Protein does
+                            not contain any COLOR or PRESERVATIVES.
                           </li>
                           <li>
-                            NO ADDED SUGAR: MusclesXtrify Nutrition Whey Protein does not Contain any Added SUGAR.
+                            NO ADDED SUGAR: MusclesXtrify Nutrition Whey Protein
+                            does not Contain any Added SUGAR.
                           </li>
                           <li>
-                            CONTAINS SUCRALOSE: It also contains SUCRALOSE as a sweetening agent and may taste bitter due to its natural properties.
+                            CONTAINS SUCRALOSE: It also contains SUCRALOSE as a
+                            sweetening agent and may taste bitter due to its
+                            natural properties.
                           </li>
                           <li>
-                            TRUSTIFIED CERTIFIED: Blind Testing for Protein & Macro Accuracy, Tested for Amino Spiking & Heavy Metals.
+                            TRUSTIFIED CERTIFIED: Blind Testing for Protein &
+                            Macro Accuracy, Tested for Amino Spiking & Heavy
+                            Metals.
                           </li>
                         </ul>
                         <h4 className="title">DIRECTIONS :</h4>
                         <p>
-                          Add one rounded scoop (30 gm) of Whey Protein to 180 - 200 ml of your favorite liquid such as water, skim milk or almond milk. Stir with a spoon or shake in a shaker for 20-25 seconds until protein powder fully dissolves.
+                          Add one rounded scoop (35 gm) of Whey Protein to 180 -
+                          200 ml of your favorite liquid such as water, skim
+                          milk or almond milk. Stir with a spoon or shake in a
+                          shaker for 20-25 seconds until protein powder fully
+                          dissolves.
                         </p>
                       </div>
                     </div>
@@ -378,7 +400,7 @@ function PureGoWheyProtein() {
                       <div className="product-desc-content">
                         <table className="table table-sm">
                           <tbody>
-                          <tr>
+                            <tr>
                               <th scope="row">Energy (kcal)</th>
                               <td>153.38</td>
                             </tr>

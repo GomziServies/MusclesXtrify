@@ -334,10 +334,14 @@ function PureGoPreWorkout() {
                         <h4 class="title mt-5">Direction For Use :</h4>
                         <ul class="product-desc-list list-wrap">
                           <li>
-                            Take 6g (scoop for beginners) once a day with 200 - 220 ml chilled water for an adult or as per Healthcare Expert.
+                            Take 5g (scoop for beginners) once a day with 200 -
+                            220 ml chilled water for an adult or as per
+                            Healthcare Expert.
                           </li>
                           <li>
-                            Take 12g (scoop for professionals) once a day with 300 - 320 ml for an adult or as per Healthcare Expert.
+                            Take 10g (scoop for professionals) once a day with
+                            300 - 320 ml for an adult or as per Healthcare
+                            Expert.
                           </li>
                         </ul>
                       </div>
@@ -428,7 +432,9 @@ function PureGoPreWorkout() {
                               <td>0.50 gm</td>
                             </tr>
                             <tr>
-                              <th scope="row">Bioperine ( Black Pepper Extract )</th>
+                              <th scope="row">
+                                Bioperine ( Black Pepper Extract )
+                              </th>
                               <td>0.005 gm</td>
                             </tr>
                           </tbody>
