@@ -325,7 +325,7 @@ function PureGoWheyProtein() {
                           Whey Isolate, Whey Concentrate, Skimmed Milk powder,
                           Soy protein isolate and plant protein. It is packed
                           with 24g of 100% High Quality whey protein per serving
-                          (30g scoop). The benchmark and premium source of
+                          (35g scoop). The benchmark and premium source of
                           protein powders. Each serving delivers an excellent
                           course of naturally occurring essential amino acids
                           and Branch Chain Amino Acids (BCAA's). The protein

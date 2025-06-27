@@ -334,12 +334,12 @@ function PureGoPreWorkout() {
                         <h4 class="title mt-5">Direction For Use :</h4>
                         <ul class="product-desc-list list-wrap">
                           <li>
-                            Take 5g (scoop for beginners) once a day with 200 -
+                            Take 6g (scoop for beginners) once a day with 200 -
                             220 ml chilled water for an adult or as per
                             Healthcare Expert.
                           </li>
                           <li>
-                            Take 10g (scoop for professionals) once a day with
+                            Take 12g (scoop for professionals) once a day with
                             300 - 320 ml for an adult or as per Healthcare
                             Expert.
                           </li>
