@@ -324,7 +324,7 @@ function PureGoWheyProtein() {
                           MusclesXtrify Nutrition Whey Protein is a Mixture of
                           Whey Isolate, Whey Concentrate, Skimmed Milk powder,
                           Soy protein isolate and plant protein. It is packed
-                          with 24g of 100% High Quality whey protein per serving
+                          with 25g of 100% High Quality whey protein per serving
                           (35g scoop). The benchmark and premium source of
                           protein powders. Each serving delivers an excellent
                           course of naturally occurring essential amino acids
